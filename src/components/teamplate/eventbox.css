@@ -41,6 +41,7 @@ div.event-box > button {
     place-items: center;
 
     margin-top: 1.5rem;
+    margin-bottom: .25rem;
     align-self: flex-end;
 
     width: calc(100% - .3rem);
