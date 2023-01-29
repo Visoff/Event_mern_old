@@ -1,5 +1,7 @@
+import "screen.css"
+
 export default function() {
     return (
-        <div>123</div>
+        <div class="screen">123</div>
     )
 }
