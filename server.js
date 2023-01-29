@@ -8,7 +8,7 @@ app.use(function (req, res, next) {
     next()
 })
 
-import ws_setup from require("./web_socket.js")
+import ws_setup from "./web_socket.js"
 ws_setup(app)
 
 import {MongoClient} from "mongodb"
@@ -40,7 +40,7 @@ app.get("/", function(req, res) {
 
 app.use(express.json())
 
-import api_setup from require("./api.js")
+import api_setup from "./api.js"
 api_setup(app)
 
 const https_server = https.createServer(ssl_cert, app)
