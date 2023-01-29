@@ -6,8 +6,8 @@ export default function () {
     return (
         <nav>
             <Button href="home" name="Главная" />
-            <Button />
-            <Button />
+            <Button href="schedule" name="Календарь" />
+            <Button href="profile" name="Профиль" />
         </nav>
     )
 }
