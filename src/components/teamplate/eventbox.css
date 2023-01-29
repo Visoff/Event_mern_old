@@ -37,6 +37,9 @@ div.event-box > p {
 }
 
 div.event-box > button {
+    display: grid;
+    place-items: center;
+
     margin-top: 1.5rem;
     align-self: flex-end;
 
@@ -45,7 +48,6 @@ div.event-box > button {
 
     font-size: 1.1rem;
     color: white;
-    text-align: center;
 
     background: none;
     border: none;
