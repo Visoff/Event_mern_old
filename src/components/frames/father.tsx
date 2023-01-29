@@ -1,7 +1,11 @@
+import Home from "./home/index.tsx"
+
 import "./father.css"
 
 export default function () {
     return (
-        <div className="frame-father">123</div>
+        <div className="frame-father">
+            <{window.currentFrame} />
+        </div>
     )
 }
