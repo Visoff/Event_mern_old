@@ -38,5 +38,5 @@ div.event-box > p {
 
 div.event-box > button {
     margin-top: 1.5rem;
-    justify-self: flex-end;
+    align-self: flex-end;
 }
