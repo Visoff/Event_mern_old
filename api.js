@@ -1,4 +1,4 @@
-function setup(app) {
+export default function (app) {
     oop = require("./oop.js")
     app.get("/api/", function(req, res) {
         res.send("Made by Visoff(ilya). If you find any bugs please contact me. Telegram: @VisoffOwner (maybe I'll change this cringie name)")
@@ -120,5 +120,3 @@ function setup(app) {
         }
     })
 }
-
-module.exports = {setup}

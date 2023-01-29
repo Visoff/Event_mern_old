@@ -1,4 +1,4 @@
-function setup(app) {
+export default function (app) {
     const WebSocket = require("ws")
     const wss = new WebSocket.Server({noServer:true})
 
@@ -26,5 +26,3 @@ function setup(app) {
         })
     })
 }
-
-module.exports = {setup}
