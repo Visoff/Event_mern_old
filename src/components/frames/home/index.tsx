@@ -2,6 +2,6 @@ import EventBox from "./../../teamplate/eventbox"
 
 export default function () {
     return (
-        <EventBox />
+        <EventBox name="CityHeroes" description="description" />
     )
 }
