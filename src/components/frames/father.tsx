@@ -1,3 +1,5 @@
+import React from "react"
+
 import Home from "./home/index"
 
 import "./father.css"
