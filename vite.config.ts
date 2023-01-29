@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import fs from "fs"
 
 const https = {
-  key: fs.readFileSync('./example.com-key.pem'),
-  cert: fs.readFileSync('./example.com.pem')
+  key: fs.readFileSync('./ca.key'),
+  cert: fs.readFileSync('./ca.crt')
 }
 
 // https://vitejs.dev/config/
