@@ -9,7 +9,8 @@ app.use(function (req, res, next) {
 })
 
 import ws_setup from "./web_socket.js"
-ws_setup(app)
+import WebSocket from "ws"
+ws_setup(app, WebSocket)
 
 import {MongoClient} from "mongodb"
 var client = new MongoClient("mongodb://127.0.0.1:27017")

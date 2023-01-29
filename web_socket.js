@@ -1,5 +1,4 @@
-import WebSocket from "ws"
-export default function (app) {
+export default function (app, WebSocket) {
     const wss = new WebSocket.Server({noServer:true})
 
     app.ws = function(path, handler) {
