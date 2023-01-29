@@ -14,13 +14,14 @@ div.event-box {
     max-width: 10rem;
     padding: .5rem;
 
+    min-height: 10rem;
+
     background-color: var(--main-color);
 
     display: flex;
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    gap: .5rem;
 }
 
 div.event-box > h1, div.event-box > p {
@@ -37,4 +38,5 @@ div.event-box > p {
 
 div.event-box > button {
     margin-top: 1.5rem;
+    justify-self: flex-end;
 }
