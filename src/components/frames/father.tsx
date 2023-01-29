@@ -1,5 +1,7 @@
+import "father.css"
+
 export default function () {
     return (
-        <div>123</div>
+        <div className="frame-father">123</div>
     )
 }
