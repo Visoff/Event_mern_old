@@ -4,9 +4,10 @@ import fs from "fs"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server:{ https:{
-    key:fs.readFile(__dirname+"ssl/cert.key"),
-    cert:fs.readFile(__dirname+"ssl/cert.pem")
-  } },
+  async server(){
+    const key = await fs.readFile(__dirname + '/ssl/cert.key')
+    const cert = await fs.readFile(__dirname + '/ssl/cert.pem')
+    return { https: { key, cert } }
+  },
   plugins: [react()],
 })
