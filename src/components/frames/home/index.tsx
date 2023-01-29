@@ -1,5 +1,7 @@
+import EventBox from "./../../teamplate/eventbox"
+
 export default function () {
     return (
-        <div>123</div>
+        <EventBox />
     )
 }

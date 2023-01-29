@@ -1,5 +1,5 @@
-export default function () {
+export default function ({name, description}) {
     return (
-        <div>123</div>
+        <div>{name}</div>
     )
 }
