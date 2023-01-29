@@ -1,4 +1,4 @@
 export default function (event:any) {
     event.preventDefault()
-    alert(event.target.getAttribute("href"))
+    window.currentFrame = event.target.getAttribute("href")
 }
