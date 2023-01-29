@@ -8,6 +8,5 @@ div.event-box-parent {
 }
 
 div.event-box {
-    min-width: fit-content;
-    max-width: calc(50% - .75rem);
+    width: 10rem;
 }
