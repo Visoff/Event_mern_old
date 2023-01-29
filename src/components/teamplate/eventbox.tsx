@@ -1,6 +1,11 @@
 import "./eventbox.css"
 
-export default function ({name, description}) {
+interface Props {
+    name:string,
+    description:string
+}
+
+export default function ({name, description}:Props) {
     return (
         <div className="event-box">
             <span>{name}</span>
