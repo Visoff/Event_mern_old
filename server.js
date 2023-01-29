@@ -1,6 +1,6 @@
 import express from "express"
 const app = express()
-const cors = require("cors")
+import cors from "cors"
 app.use(cors())
 
 app.use(function (req, res, next) {
@@ -8,9 +8,10 @@ app.use(function (req, res, next) {
     next()
 })
 
-require("./web_socket.js").setup(app)
+import ws_setup from require("./web_socket.js")
+ws_setup(app)
 
-const MongoClient = require("mongodb").MongoClient
+import {MongoClient} from "mongodb"
 var client = new MongoClient("mongodb://127.0.0.1:27017")
 
 var cursor = undefined
@@ -20,9 +21,9 @@ async function on_mongo_connect() {
     console.log("mongodb is connected")
 }
 
-const fs = require("fs")
-const https = require("https")
-const http = require("http")
+import fs  from"fs"
+import https from"https"
+import http from"http"
 const ssl_cert = {key: fs.readFileSync(__dirname+'/ssl/cert.key', 'utf8'), cert: fs.readFileSync(__dirname+'/ssl/cert.pem', 'utf8')}
 
 
@@ -39,7 +40,8 @@ app.get("/", function(req, res) {
 
 app.use(express.json())
 
-require("./api.js").setup(app)
+import api_setup from require("./api.js")
+api_setup(app)
 
 const https_server = https.createServer(ssl_cert, app)
 const http_server = http.createServer(app)
