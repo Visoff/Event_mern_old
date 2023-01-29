@@ -1,7 +1,5 @@
 export default function() {
-    function render() {
-        return (
-            <a class=""></a>
-        )
-    }
+    return (
+        <a>123</a>
+    )
 }
