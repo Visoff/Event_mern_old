@@ -1,4 +1,4 @@
-import Home from "./home/index.tsx"
+import Home from "./home/index"
 
 import "./father.css"
 
