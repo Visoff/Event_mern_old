@@ -1,4 +1,4 @@
-import "screen.css"
+import "./screen.css"
 
 export default function() {
     return (
