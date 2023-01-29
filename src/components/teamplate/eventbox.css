@@ -18,10 +18,10 @@ div.event-box {
 
     background-color: var(--main-color);
 
-    display: flex;
+    display: grid;
     align-items: center;
     justify-items: center;
-    flex-direction: column;
+    grid-auto-flow: row;
 }
 
 div.event-box > h1, div.event-box > p {
