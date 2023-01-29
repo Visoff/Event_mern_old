@@ -1,7 +1,9 @@
-import React, {FC} from 'react'
+import React, {FC, useContext} from 'react'
 import ReactDOM from 'react-dom/client'
 import Window from './components/screen'
 import './index.css'
+
+const currentFrame = React.createContext()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

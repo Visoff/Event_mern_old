@@ -1,4 +1,5 @@
 export default function (event:any) {
     event.preventDefault()
-    window.currentFrame = event.target.getAttribute("href").split("#")[1]
+    const {frame, setframe} = useContext(currentFrame)
+    setframe(event.target.getAttribute("href").split("#")[1])
 }
