@@ -1,4 +1,4 @@
-import "father.css"
+import "./father.css"
 
 export default function () {
     return (
