@@ -20,6 +20,11 @@ div.event-box {
     align-items: center;
     justify-items: center;
     flex-direction: column;
+    gap: .5rem;
+}
+
+div.event-box > h1, div.event-box > p {
+    margin: 0;
 }
 
 div.event-box > h1 {
