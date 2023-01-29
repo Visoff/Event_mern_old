@@ -5,7 +5,7 @@ import "./father.css"
 export default function () {
     return (
         <div className="frame-father">
-            <{window.currentFrame} />
+            {window.currentFrame == "Home" && <Home />}
         </div>
     )
 }
