@@ -1,4 +1,5 @@
 export default function (event:any) {
     event.preventDefault()
-    alert(this.getAttribute("href"))
+    console.log(event)
+    //alert(event.getAttribute("href"))
 }
