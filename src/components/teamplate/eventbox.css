@@ -27,6 +27,10 @@ div.event-box > h1 {
     font-size: 1.5rem;
 }
 
+div.event-box > p {
+    font-size: 1.2rem;
+}
+
 div.event-box > button {
     margin-top: 1.5rem;
 }
