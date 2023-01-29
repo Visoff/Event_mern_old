@@ -4,5 +4,6 @@ div.event-box-parent {
     padding: .5rem;
 
     display: grid;
-    grid-template-columns: repeat(50%, 2);
+    grid-template-columns: repeat(2, 50%);
+    gap: .5rem;
 }
