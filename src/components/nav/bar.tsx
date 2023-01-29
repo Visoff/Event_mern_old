@@ -5,7 +5,7 @@ import "./bar.css"
 export default function () {
     return (
         <nav>
-            <Button />
+            <Button href="home" name="Главная" />
             <Button />
             <Button />
         </nav>
