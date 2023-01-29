@@ -8,3 +8,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Window />
   </React.StrictMode>,
 )
+
+import load from "./onload.ts"
+load()
