@@ -1,14 +1,15 @@
-import React from "react"
+import {useState} from "react"
 
 import Home from "./home/index"
 
 import "./father.css"
 
 export default function () {
-    console.log(React.useContext(window.currentFrame))
+    const [frame, setframe] = useState("Home")
+    window.setframe = setframe
     return (
         <div className="frame-father">
-            {window.currentFrame == "Home" && <Home />}
+            {frame == "Home" && <Home />}
         </div>
     )
 }
