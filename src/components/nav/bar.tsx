@@ -1,6 +1,6 @@
 import Button from "./Button"
 
-import "bar.css"
+import "./bar.css"
 
 export default function () {
     return (
