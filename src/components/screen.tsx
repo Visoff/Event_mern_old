@@ -1,7 +1,11 @@
+import NavBar from "./nav/bar"
+
 import "./screen.css"
 
 export default function() {
     return (
-        <div className="screen">123</div>
+        <div className="screen">
+            <NavBar />
+        </div>
     )
 }
