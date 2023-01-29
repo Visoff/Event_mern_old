@@ -40,6 +40,8 @@ div.event-box > button {
     margin-top: 1.5rem;
     align-self: flex-end;
 
+    width: calc(100% - 1rem);
+
     background: none;
     border: none;
 
