@@ -16,4 +16,7 @@ div.event-box {
     align-items: center;
     justify-items: center;
     flex-direction: column;
+    gap: .5rem;
 }
+
+div.event-box > button {margin-top: 1.5rem;}
