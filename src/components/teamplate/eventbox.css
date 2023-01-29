@@ -4,5 +4,10 @@ div.event-box-parent {
     padding: .5rem;
 
     display: flex;
-    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+div.event-box {
+    min-width: fit-content;
+    max-width: calc(50% - .75rem);
 }
