@@ -1,7 +1,7 @@
 export default function() {
     render() {
         return (
-            "123"
+            <div>123</div>
         )
     }
 }
