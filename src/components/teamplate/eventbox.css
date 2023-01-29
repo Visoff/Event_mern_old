@@ -4,5 +4,5 @@ div.event-box-parent {
     padding: .5rem;
 
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
 }
