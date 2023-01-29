@@ -12,4 +12,8 @@ div.event-box-parent {
 
 div.event-box {
     width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
