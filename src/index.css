@@ -4,6 +4,10 @@
   --secondary-color: #B063C3;
 }
 
+.row > * {
+  display: inline-block;
+}
+
 body {
   margin: 0;
 }
