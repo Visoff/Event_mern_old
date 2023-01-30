@@ -21,7 +21,7 @@ div.event-box {
     justify-items: center;
     grid-auto-flow: row;
 
-    box-shadow: 0px 0px 10px #CCCCCC;
+    box-shadow: 0px 0px 1rem #000;
     background-color: white;
 }
 
