@@ -23,4 +23,6 @@ div.horizontal-list {
     display: flex;
     flex-direction: row;
     gap: .5rem;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
