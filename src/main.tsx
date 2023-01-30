@@ -5,7 +5,7 @@ import './index.css'
 
 declare global {
   interface Window {
-    setFrame:Function
+    setframe:Function
   }
 }
 
