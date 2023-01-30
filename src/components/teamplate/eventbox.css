@@ -11,10 +11,10 @@ div.event-box-parent {
 }
 
 div.event-box {
-    max-width: 10rem;
+    width: 10rem;
     padding: .5rem;
 
-    min-height: 14rem;
+    height: 14rem;
 
     display: grid;
     align-items: center;
