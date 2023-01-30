@@ -28,3 +28,6 @@ div.horizontal-list {
 }
 
 div.horizontal-list::-webkit-scrollbar {width: .25rem;}
+div.horizontal-list::-webkit-scrollbar-track {background: #ccccccaa;}
+div.horizontal-list.event-list::-webkit-scrollbar-thumb {background: var(--main-color);}
+div.horizontal-list.team-list::-webkit-scrollbar-thumb {background: var(--secondary-color);}
