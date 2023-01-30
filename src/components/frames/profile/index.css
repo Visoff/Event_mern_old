@@ -8,3 +8,11 @@ div.profile-frame div.icon {
     border-radius: 50%;
     background-color: var(--main-color);
 }
+
+div.profile-frame div.name-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 1rem;
+}
