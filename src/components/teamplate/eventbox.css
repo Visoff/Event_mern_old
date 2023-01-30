@@ -11,7 +11,7 @@ div.event-box-parent {
 }
 
 div.event-box {
-    width: 10rem;
+    max-width: 10rem;
     padding: .5rem;
 
     height: 14rem;
