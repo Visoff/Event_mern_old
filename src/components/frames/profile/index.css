@@ -26,3 +26,5 @@ div.horizontal-list {
     overflow-y: hidden;
     overflow-x: auto;
 }
+
+div.horizontal-list::-webkit-scrollbar {width: .25rem;}
