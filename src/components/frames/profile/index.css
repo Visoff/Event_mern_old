@@ -22,7 +22,7 @@ div.profile-frame div.name-parent div.name {font-weight: bold;}
 div.horizontal-list {
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+    gap: .75rem;
     overflow-y: hidden;
     overflow-x: auto;
 }
