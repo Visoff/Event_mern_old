@@ -56,3 +56,4 @@ div.event-box > button {
     background-color: var(--main-color);
     border-radius: .5rem;
 }
+div.event-box.secondary-color > button {background-color: var(--secondary-color);}
