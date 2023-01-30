@@ -30,7 +30,7 @@ div.horizontal-list {
 div.horizontal-list::-webkit-scrollbar {height: .5rem;}
 div.horizontal-list::-webkit-scrollbar-track {background: #ccccccaa;}
 div.horizontal-list::-webkit-scrollbar-thumb {border-radius: .5rem;}
-div.horizontal-list.event-list::-webkit-scrollbar-thumb {background: var(--main-color);}
+div.horizontal-list.event-list::-webkit-scrollbar-thumb {background: var(--secondary-color);}
 div.horizontal-list.event-list {background-color: var(--main-color);}
-div.horizontal-list.team-list::-webkit-scrollbar-thumb {background: var(--secondary-color);}
+div.horizontal-list.team-list::-webkit-scrollbar-thumb {background: var(--main-color);}
 div.horizontal-list.team-list {background-color: var(--secondary-color);}
