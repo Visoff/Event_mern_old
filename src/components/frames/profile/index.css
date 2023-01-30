@@ -20,6 +20,7 @@ div.profile-frame div.name-parent {
 div.profile-frame div.name-parent div.name {font-weight: bold;}
 
 div.horizontal-list {
+    padding: .5rem;
     display: flex;
     flex-direction: row;
     gap: .75rem;
