@@ -12,16 +12,16 @@ export default function ProfileFrame() {
                 </div>
             </div>
             <div className="horizontal-list event-list">
-                <EventBox name="CityHeroes" description="came first" />
-                <EventBox name="CityHeroes" description="came first" />
-                <EventBox name="CityHeroes" description="came first" />
-                <EventBox name="CityHeroes" description="came first" />
+                <EventBox color="secondary" name="CityHeroes" description="came first" />
+                <EventBox color="secondary" name="CityHeroes" description="came first" />
+                <EventBox color="secondary" name="CityHeroes" description="came first" />
+                <EventBox color="secondary" name="CityHeroes" description="came first" />
             </div>
             <div className="horizontal-list team-list">
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
+                <EventBox name="CityHeroes" description="came first" />
+                <EventBox name="CityHeroes" description="came first" />
+                <EventBox name="CityHeroes" description="came first" />
+                <EventBox name="CityHeroes" description="came first" />
             </div>
         </div>
     )
