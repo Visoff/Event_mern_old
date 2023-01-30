@@ -6,7 +6,7 @@ import Profile from "./profile/index"
 
 import "./father.css"
 
-export default function () {
+export default function FrameFather() {
     const [frame, setframe] = useState("Home")
     window.setframe = setframe
     return (

@@ -5,7 +5,7 @@ interface Props {
     description:string
 }
 
-export default function ({name, description}:Props) {
+export default function EventBox({name, description}:Props) {
     return (
         <div className="event-box">
             <h1>{name}</h1>

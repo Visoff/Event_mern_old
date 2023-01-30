@@ -1,6 +1,6 @@
 import "./index.css"
 
-export default function () {
+export default function ProfileFrame() {
     return (
         <div className="profile-frame">
             <div className="icon"></div>

@@ -2,7 +2,7 @@ import Button from "./Button"
 
 import "./bar.css"
 
-export default function () {
+export default function NavBar() {
     return (
         <nav>
             <Button href="Home" name="Главная" />
