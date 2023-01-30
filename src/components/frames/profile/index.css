@@ -17,3 +17,4 @@ div.profile-frame div.name-parent {
 
     padding: 0 1rem;
 }
+div.profile-frame div.name-parent div.name {font-weight: bold;}
