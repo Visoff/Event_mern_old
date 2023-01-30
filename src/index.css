@@ -4,8 +4,9 @@
   --secondary-color: #B063C3;
 }
 
-.row > * {
-  display: inline-block;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 body {
