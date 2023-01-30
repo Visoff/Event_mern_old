@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client'
 import Window from './components/screen'
 import './index.css'
 
+declare global {
+  interface Window {
+    setFrame:Function
+  }
+}
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Window />
