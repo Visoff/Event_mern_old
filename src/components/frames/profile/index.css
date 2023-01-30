@@ -27,7 +27,7 @@ div.horizontal-list {
     overflow-x: auto;
 }
 
-div.horizontal-list::-webkit-scrollbar {width: .025rem;}
+div.horizontal-list::-webkit-scrollbar {height: .5rem;}
 div.horizontal-list::-webkit-scrollbar-track {background: #ccccccaa;}
 div.horizontal-list.event-list::-webkit-scrollbar-thumb {background: var(--main-color);}
 div.horizontal-list.team-list::-webkit-scrollbar-thumb {background: var(--secondary-color);}
