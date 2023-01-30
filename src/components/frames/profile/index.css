@@ -1,5 +1,8 @@
 div.profile-frame {
     padding: .25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 div.profile-frame div.icon {
