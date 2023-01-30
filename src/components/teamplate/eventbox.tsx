@@ -2,12 +2,17 @@ import "./eventbox.css"
 
 interface Props {
     name:string,
-    description:string
+    description:string,
+    color?:string
 }
 
-export default function EventBox({name, description}:Props) {
+export default function EventBox({name, description, color}:Props) {
+    var classgen = "event-box"
+    if (color == "secondary") {
+        classgen+=" secondary-color"
+    }
     return (
-        <div className="event-box">
+        <div className={classgen}>
             <h1>{name}</h1>
             <p>{description}</p>
             <button>Подробнее</button>
