@@ -1,0 +1,10 @@
+div.profile-frame {
+    padding: .25rem;
+}
+
+div.profile-frame > div.icon {
+    width: 8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
