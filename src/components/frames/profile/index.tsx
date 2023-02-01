@@ -13,10 +13,10 @@ export default function ProfileFrame() {
                 </div>
             </div>
             <div className="horizontal-list event-list">
-                {window.user.teams.map(el => {return <EventBox color="secondary" name={el.name} description="descr" />})}
+                {window.user.teams.map(el => {return <EventBox key={el._id} color="secondary" name={el.name} description="descr" />})}
             </div>
             <div className="horizontal-list team-list">
-                {window.user.events.map(el => {return <EventBox name={el.name} description="кто" />})}
+                {window.user.events.map(el => {return <EventBox key={el._id} name={el.name} description="кто" />})}
             </div>
             <div className="info">
                 <InfoCard header="Телефон" content="8-(913)-627-54-12" />
