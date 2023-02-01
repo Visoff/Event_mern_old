@@ -22,7 +22,7 @@ const Calendar = () => {
     dateCopy.setDate(0 - offset);
 
     for (let i = 0; i < 42; i++) {
-      dateCopy.setDate(dateCopy.getDate() + 1);
+      dateCopy.setDate(dateCopy.getDate());
       const currentDay = dateCopy.getDate();
       const currentMonth = dateCopy.getMonth();
 
