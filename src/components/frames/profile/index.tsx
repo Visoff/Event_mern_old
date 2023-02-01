@@ -19,7 +19,7 @@ export default function ProfileFrame() {
                 <EventBox color="secondary" name="CityHeroes" description="came first" />
             </div>
             <div className="horizontal-list team-list">
-                <EventBox name="Организаторы" description="кто?" />
+                <EventBox name="Организаторы" description="кто" />
                 <EventBox name="CityHeroes" description="came first" />
                 <EventBox name="CityHeroes" description="came first" />
                 <EventBox name="CityHeroes" description="came first" />
