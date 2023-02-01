@@ -41,8 +41,8 @@ const Calendar = () => {
       <table>
         <thead>
           <tr>
-            <th onClick={handlePrevMonth}>{'<'}</th>
             <th colSpan="5">{`${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`}</th>
+            <th onClick={handlePrevMonth}>{'<'}</th>
             <th onClick={handleNextMonth}>{'>'}</th>
           </tr>
         </thead>
