@@ -1,5 +1,7 @@
+import Calendar from "./calendar"
+
 export default function ScheduleFrame() {
     return (
-        <div>456</div>
+        <div><Calendar /></div>
     )
 }
