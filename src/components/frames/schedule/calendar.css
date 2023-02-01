@@ -12,5 +12,5 @@ div.calendar {
 div.calendar tbody {
     width: 100%;
     display: grid;
-    place-items: center;
+    justify-items: space-evenly;
 }
