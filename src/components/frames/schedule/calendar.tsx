@@ -20,7 +20,7 @@ export default function Calendar() {
         res.push(<div key={i}>{i}</div>)
     }
     cursor = new Date(current_year, current_month, 0)
-    var i = cursor.getDate()
+    var i = cursor.getDate()+1
     while (cursor.getDay() != 1) {
         cursor.setDate(--i)
         res.push(<div key={i}>{i}</div>)
