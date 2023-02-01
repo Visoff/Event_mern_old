@@ -4,4 +4,5 @@ div.frame-father {
     left: 0;
     width: 100%;
     height: calc(100% - 2.5rem);
+    overflow-y: auto;
 }
