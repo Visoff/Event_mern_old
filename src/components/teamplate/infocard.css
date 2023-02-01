@@ -1,5 +1,18 @@
 .info-card {
     background-color: var(--white);
     box-shadow: 0px 0px 10px 1px #000000aa;
-    padding: 1rem .5rem;
+    padding: .5rem .25rem;
+    width: fit-content;
+}
+
+div.info-card > h1, div.info-card > p {
+    margin: 0;
+}
+
+div.info-card > h1 {
+    font-size: 1.5rem;
+}
+
+div.info-card > p {
+    font-size: 1.2rem;
 }
