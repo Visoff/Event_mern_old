@@ -17,6 +17,7 @@ div.calendar tr {justify-content: space-evenly;}
 div.calendar thead th:has(div) {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 div.calendar td.other-month {
