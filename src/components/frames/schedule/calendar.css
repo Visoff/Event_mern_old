@@ -1,5 +1,6 @@
 div.calendar {
     width: calc(100% - 2.5rem);
+    height: 50%;
     margin: .5rem;
     background-color: var(--main-color);
     border-radius: .5rem;
@@ -9,4 +10,5 @@ div.calendar {
     place-items: center;
 }
 
+div.calendar tbody {align-items: center;}
 div.calendar tr {justify-content: space-evenly;}
