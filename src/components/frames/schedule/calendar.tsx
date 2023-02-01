@@ -13,7 +13,7 @@ export default function calendar() {
     for (var i = 1; i < month_length; i++) {
         cursor.setDate(i)
         if (cursor.getDay() == 1) {res.push(<br></br>)}
-        res.push(<div>i</div>)
+        res.push(<div>{i}</div>)
     }
 
     return (
