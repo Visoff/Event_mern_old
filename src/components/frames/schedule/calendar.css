@@ -9,8 +9,4 @@ div.calendar {
     place-items: center;
 }
 
-div.calendar tbody {
-    width: 100%;
-    display: grid;
-    justify-items: space-evenly;
-}
+div.calendar tr {justify-content: space-evenly;}
