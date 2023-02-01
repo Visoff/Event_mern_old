@@ -8,3 +8,9 @@ div.calendar {
     display: grid;
     place-items: center;
 }
+
+div.calendar table {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
