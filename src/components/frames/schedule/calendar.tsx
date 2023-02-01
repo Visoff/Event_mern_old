@@ -1,3 +1,5 @@
+import "./calendar.css"
+
 export default function Calendar() {
     
     const res = []
@@ -28,7 +30,7 @@ export default function Calendar() {
 
 
     return (
-        <div>
+        <div className="calendar">
             {res}
         </div>
     );
