@@ -8,11 +8,19 @@ import './index.css'
 declare global {
   interface Window {
     setframe:Function,
-    user:[
-      data:Object,
-      setData:Function
-    ]
+    user:Object
   }
+}
+
+var id;
+if ((id = localStorage.getItem("user_id")) != undefined) {
+    axios.post("https://visoff.ru/api/db/user/getBy/id", {
+      id
+    }).then(
+      response => {
+        window.user = response.data
+      }
+    )
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
