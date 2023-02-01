@@ -13,7 +13,11 @@ export default function ProfileFrame() {
                 </div>
             </div>
             <div className="horizontal-list event-list">
-                {window.user.teams.map(el => {return <EventBox color="secondary" name={el.name} description="descr" />})}
+                {   
+                    window.user.teams.map(el => {
+                        return <EventBox color="secondary" name={el.name} description="descr" />
+                    })
+                }
             </div>
             <div className="horizontal-list team-list">
                 <EventBox name="Организаторы" description="кто" />

@@ -32,6 +32,7 @@ declare global {
 
 var id;
 if ((id = localStorage.getItem("user_id")) != undefined) {
+  id = parseInt(id)
   window.user = {data:{}, teams:[], events:[]}
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
