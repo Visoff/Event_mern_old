@@ -43,5 +43,6 @@ div.horizontal-list.team-list {background-color: var(--secondary-color);}
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: .5rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
