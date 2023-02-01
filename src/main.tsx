@@ -8,10 +8,10 @@ import './index.css'
 declare global {
   interface Window {
     setframe:Function,
-    user:{
+    user:[
       data:Object,
       setData:Function
-    }
+    ]
   }
 }
 

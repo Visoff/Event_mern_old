@@ -8,15 +8,14 @@ import "./screen.css"
 
 export default function screen() {
     {
-        const [data, setData] = useState({id:-1})
-        window.user = {data, setData}
+        window.user = useState({id:-1})
         var id;
         if ((id = localStorage.getItem("user_id")) != undefined) {
           (async (id) => {
             var response = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
               id
             })
-            window.user.setData(response.data)
+            window.user[1](response.data)
           })(id)
         }
     }
