@@ -14,8 +14,8 @@ export default function Calendar() {
         res.push(<div key={i}>{i}</div>)
     }
     var i = month_length
-    while (i%7 != 0) {
-        i++
+    while (cursor.getDay() != 1) {
+        cursor.setDate(++i)
         res.push(<div key={i}>{i}</div>)
     }
 
