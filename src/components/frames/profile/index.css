@@ -38,3 +38,9 @@ div.horizontal-list.event-list::-webkit-scrollbar-thumb {background: var(--secon
 div.horizontal-list.event-list {background-color: var(--main-color);}
 div.horizontal-list.team-list::-webkit-scrollbar-thumb {background: var(--main-color);}
 div.horizontal-list.team-list {background-color: var(--secondary-color);}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

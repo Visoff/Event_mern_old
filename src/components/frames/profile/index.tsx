@@ -24,7 +24,9 @@ export default function ProfileFrame() {
                 <EventBox name="CityHeroes" description="came first" />
                 <EventBox name="CityHeroes" description="came first" />
             </div>
-            <InfoCard header="Телефон" content="8-(913)-627-54-12" />
+            <div className="info">
+                <InfoCard header="Телефон" content="8-(913)-627-54-12" />
+            </div>
         </div>
     )
 }
