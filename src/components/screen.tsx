@@ -13,10 +13,11 @@ export default function screen() {
         var id;
         if ((id = localStorage.getItem("user_id")) != undefined) {
           (async (id) => {
-            var data = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
+            var response = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
               data:{id}
             })
-            window.user.setData(data.data)
+            console.log(response)
+            //window.user.setData(JSON.parse(data.data))
           })(id)
         }
     }
