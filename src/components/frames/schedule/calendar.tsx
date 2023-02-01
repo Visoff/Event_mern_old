@@ -1,4 +1,4 @@
-export default function calendar() {
+export default function Calendar() {
     
     const res = []
 
