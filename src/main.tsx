@@ -15,20 +15,6 @@ declare global {
   }
 }
 
-{
-  const [data, setData] = useState({id:-1})
-  window.user = {data, setData}
-  var id;
-  if ((id = localStorage.getItem("user_id")) != undefined) {
-    (async (id) => {
-      var data = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
-        data:{id}
-      })
-      console.log(data)
-    })(id)
-  }
-}
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Window />
