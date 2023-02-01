@@ -17,12 +17,12 @@ const Calendar = () => {
   const renderDays = () => {
     const days = [];
     const dateCopy = new Date(date);
-    dateCopy.setDate(1);
+    dateCopy.setDate(0);
     const offset = dateCopy.getDay();
     dateCopy.setDate(0 - offset);
 
     for (let i = 0; i < 42; i++) {
-      dateCopy.setDate(dateCopy.getDate());
+      dateCopy.setDate(dateCopy.getDate() + 1);
       const currentDay = dateCopy.getDate();
       const currentMonth = dateCopy.getMonth();
 
