@@ -4,4 +4,5 @@ div.calendar {
     background-color: var(--main-color);
     border-radius: .25rem;
     padding: .25rem;
+    font-size: 1.25rem;
 }
