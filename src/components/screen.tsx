@@ -14,7 +14,7 @@ export default function screen() {
         if ((id = localStorage.getItem("user_id")) != undefined) {
           (async (id) => {
             var response = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
-              data:{id}
+              data:{"id":id}
             })
             console.log(response)
             //window.user.setData(JSON.parse(data.data))
