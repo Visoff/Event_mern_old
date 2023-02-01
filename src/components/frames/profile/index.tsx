@@ -26,9 +26,9 @@ export default function ProfileFrame() {
             </div>
             <div className="info">
                 <InfoCard header="Телефон" content="8-(913)-627-54-12" />
+                <InfoCard header="Телега" content="@VisoffOwner" />
                 <InfoCard header="Почта" content="ikalinin01@mail.ru
                 ikalinin667@gmail.com" />
-                <InfoCard header="Телега" content="@VisoffOwner" />
             </div>
         </div>
     )
