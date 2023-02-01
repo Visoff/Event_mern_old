@@ -5,4 +5,6 @@ div.calendar {
     border-radius: .25rem;
     padding: .25rem;
     font-size: 1.25rem;
+    display: grid;
+    place-items: center;
 }
