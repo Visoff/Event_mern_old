@@ -1,4 +1,5 @@
 import EventBox from "../../teamplate/eventbox"
+import InfoCard from "../../teamplate/infocard"
 import "./index.css"
 
 export default function ProfileFrame() {
@@ -23,6 +24,7 @@ export default function ProfileFrame() {
                 <EventBox name="CityHeroes" description="came first" />
                 <EventBox name="CityHeroes" description="came first" />
             </div>
+            <InfoCard header="Телефон" content="8-(913)-627-54-12" />
         </div>
     )
 }
