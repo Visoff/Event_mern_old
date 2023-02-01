@@ -43,8 +43,8 @@ const Calendar = () => {
           <tr>
             <th colSpan="5">{`${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`}</th>
             <div>
-                <th onClick={handleNextMonth}>{'>'}</th>
                 <th onClick={handlePrevMonth}>{'<'}</th>
+                <th onClick={handleNextMonth}>{'>'}</th>
             </div>
           </tr>
         </thead>
