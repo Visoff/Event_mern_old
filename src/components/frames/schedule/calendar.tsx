@@ -8,10 +8,14 @@ export default function Calendar() {
     const last_day = new Date(current_year, current_month+1, 0)
     const month_length = last_day.getDate()
 
-    var cursor = new Date(current_year, current_month, 1);
-
+    var cursor =  new Date();
     for (var i = 1; i <= month_length; i++) {
         cursor.setDate(i)
+        res.push(<div key={i}>{i}</div>)
+    }
+    var i = month_length
+    while (cursor.getDate()%7 != 0) {
+        i++
         res.push(<div key={i}>{i}</div>)
     }
 
