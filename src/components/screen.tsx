@@ -16,7 +16,7 @@ export default function screen() {
             var data = await axios.post("https://visoff.ru/api/db/user/getBy/id", {
               data:{id}
             })
-            console.log(data)
+            window.user.setData(data.data)
           })(id)
         }
     }
