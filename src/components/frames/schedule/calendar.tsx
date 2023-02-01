@@ -23,7 +23,7 @@ export default function Calendar() {
     var i = cursor.getDate()+1
     while (cursor.getDay() != 1) {
         cursor.setDate(--i)
-        res.push(<div key={i}>{i}</div>)
+        res.unshift(<div key={i}>{i}</div>)
     }
 
 
