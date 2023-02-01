@@ -4,7 +4,7 @@ import "./calendar.css"
 
 const Calendar = () => {
   const [date, setDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handlePrevMonth = () => {
     setDate(prevDate => new Date(prevDate.getFullYear(), prevDate.getMonth() - 1));
