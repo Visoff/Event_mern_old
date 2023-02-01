@@ -1,5 +1,5 @@
 div.calendar {
-    width: calc(100% - 1rem);
+    width: calc(100% - 2.5rem);
     margin: .5rem;
     background-color: var(--main-color);
     border-radius: .5rem;
