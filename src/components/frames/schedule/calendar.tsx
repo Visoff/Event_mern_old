@@ -19,7 +19,7 @@ const Calendar = () => {
     const dateCopy = new Date(date);
     dateCopy.setDate(1);
     const offset = dateCopy.getDay();
-    dateCopy.setDate(0 - offset);
+    dateCopy.setDate(1 - offset);
 
     for (let i = 0; i < 42; i++) {
       dateCopy.setDate(dateCopy.getDate() + 1);
@@ -28,7 +28,7 @@ const Calendar = () => {
 
       days.push(
         <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} onClick={() => setSelectedDate(new Date(dateCopy))}>
-          {currentDay+1}
+          {currentDay}
         </td>
       );
     }
