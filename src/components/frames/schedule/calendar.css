@@ -1,5 +1,6 @@
 div.calendar {
     max-width: calc(100% - 1rem);
+    min-height: fit-content;
     margin: .5rem;
     background-color: var(--main-color);
     border-radius: .25rem;
