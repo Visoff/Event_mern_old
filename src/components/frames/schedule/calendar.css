@@ -1,5 +1,4 @@
 div.calendar {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(7 20px);
+    width: calc(100% - 1rem);
+    margin: .5rem;
 }
