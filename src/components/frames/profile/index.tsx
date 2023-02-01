@@ -8,15 +8,12 @@ export default function ProfileFrame() {
             <div className="row">
                 <div className="icon"></div>
                 <div className="name-parent">
-                    <div className="name">Ilya</div>
+                    <div className="name">{window.user.data.name}</div>
                     <div className="description">I suck and please help me (nvm i have chat gpt)</div>
                 </div>
             </div>
             <div className="horizontal-list event-list">
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
-                <EventBox color="secondary" name="CityHeroes" description="came first" />
+                {window.user.teams.map(el => {return <EventBox color="secondary" name={el.name} description="descr" />})}
             </div>
             <div className="horizontal-list team-list">
                 <EventBox name="Организаторы" description="кто" />

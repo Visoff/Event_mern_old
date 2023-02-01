@@ -8,7 +8,25 @@ import './index.css'
 declare global {
   interface Window {
     setframe:Function,
-    user:Object
+    user:{
+      data:{
+        id:Number,
+        name:string,
+        nickname:string,
+        password:string
+      },
+      teams:[{
+        _id:string,
+        id:Number,
+        name:string
+      }],
+      events:{
+        _id:string,
+        id:Number,
+        name:string,
+        data:string
+      }
+    }
   }
 }
 
@@ -18,7 +36,21 @@ if ((id = localStorage.getItem("user_id")) != undefined) {
       id
     }).then(
       response => {
-        window.user = response.data
+        window.user.data = response.data
+      }
+    )
+    axios.post("https://visoff.ru/api/db/user/get/teams", {
+      id
+    }).then(
+      response => {
+        window.user.teams = response.data
+      }
+    )
+    axios.post("https://visoff.ru/api/db/user/get/events", {
+      id
+    }).then(
+      response => {
+        window.user.events = response.data
       }
     )
 }
