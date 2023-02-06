@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./EventInDetails.css"
 
 interface Props {
@@ -15,6 +16,7 @@ export default function EventInDetails({name, description, color, date, tags, re
     if (color == "secondary") {
         classgen+=" secondary-color"
     }
+    const [reg, register] = useState(false)
     return (
         <div className={classgen}>
             <h1>{name}</h1>
@@ -24,8 +26,8 @@ export default function EventInDetails({name, description, color, date, tags, re
                 <p><strong>Tags:</strong> {tags.join(", ")}</p>
                 <p><strong>Registrations:</strong> {registrationCount}</p>
             </div>
-            <button className={registered?"registered":"not-registered"}>
-                {registered?"Зарегистрировано":"Зарегистрироваться"}
+            <button className={reg?"registered":"not-registered"} onClick={() => {register(!reg)}}>
+                {reg?"Зарегистрировано":"Зарегистрироваться"}
             </button>
         </div>
     )
