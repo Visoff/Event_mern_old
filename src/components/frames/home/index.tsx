@@ -1,11 +1,11 @@
-import EventBox from "./../../teamplate/eventbox"
+import EventInDetails from "../../teamplate/EventInDetails"
 
 export default function HomeFrame() {
     return (
         <div className="event-box-parent">
-            <EventBox name="CityHeroes" description="yooo it works" />
-            <EventBox name="CityHeroes" description="description" />
-            <EventBox name="CityHeroes" description="description" />
+            <EventInDetails name="CityHeroes" description="yooo it works" date="12-12-12" tags={["12", "13", "14"]} />
+            <EventInDetails name="CityHeroes" description="yooo it works" date="12-12-12" tags={["12", "13", "14"]} />
+            <EventInDetails name="CityHeroes" description="yooo it works" date="12-12-12" tags={["12", "13", "14"]} />
         </div>
     )
 }
