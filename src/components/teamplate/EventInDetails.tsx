@@ -18,7 +18,6 @@ export default function EventInDetails({name, description, color, date, tags, re
     }
     const [registered_state, register] = useState(registered)
     const [registrationCount_state, set_registrationCount] = useState(registrationCount)
-    if (registered_state == undefined) set_registrationCount(0)
     return (
         <div className={classgen}>
             <h1>{name}</h1>
