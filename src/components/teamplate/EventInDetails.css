@@ -65,21 +65,22 @@ div.event-box > button {
     border-radius: .5rem;
 }
 
-div.event-box > div.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-
-    margin-top: 1.5rem;
+.event-box > .details {
+    margin: .5rem 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: .5rem;
+    font-size: .9rem;
+}
+    
+.event-box > .details > p {
+    margin: 0;
 }
 
-div.event-box > div.tags > span.tag {
-    padding: .3rem .5rem;
+.event-box > button.registered {
+    background-color: var(--secondary-color);
+}
 
+.event-box > button.not-registered {
     background-color: var(--main-color);
-    color: var(--white);
-
-    border-radius: .5rem;
-
-    font-size: .9rem;
 }
