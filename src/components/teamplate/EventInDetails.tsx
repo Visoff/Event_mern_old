@@ -7,8 +7,8 @@ interface Props {
     color?:string,
     date:string,
     tags:Array<string>,
-    registered?:boolean,
-    registrationCount?:number
+    registered:boolean,
+    registrationCount:number
 }
 
 export default function EventInDetails({name, description, color, date, tags, registered, registrationCount}:Props) {
@@ -32,4 +32,9 @@ export default function EventInDetails({name, description, color, date, tags, re
             </button>
         </div>
     )
+}
+
+EventInDetails.defaultProps = {
+    registered:false,
+    registrationCount:0
 }
