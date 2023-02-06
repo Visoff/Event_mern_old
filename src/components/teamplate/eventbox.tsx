@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./eventbox.css"
 
 interface Props {
@@ -11,6 +12,8 @@ export default function EventBox({name, description, color}:Props) {
     if (color == "secondary") {
         classgen+=" secondary-color"
     }
+    const [date, setDate] = useState("12-12-12")
+    const [tags, setTags] = useState(["12", "13", "Rock"])
     return (
         /*
         <div className={classgen}>
