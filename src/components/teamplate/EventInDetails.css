@@ -64,3 +64,22 @@ div.event-box > button {
 
     border-radius: .5rem;
 }
+
+div.event-box > div.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    margin-top: 1.5rem;
+}
+
+div.event-box > div.tags > span.tag {
+    padding: .3rem .5rem;
+
+    background-color: var(--main-color);
+    color: var(--white);
+
+    border-radius: .5rem;
+
+    font-size: .9rem;
+}
