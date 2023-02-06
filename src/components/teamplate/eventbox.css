@@ -1,4 +1,4 @@
-div.event-box-parent {
+/*div.event-box-parent {
     width: calc(100% - 1rem);
     height: fit-content;
     padding: .5rem;
@@ -56,4 +56,35 @@ div.event-box > button {
     background-color: var(--main-color);
     border-radius: .5rem;
 }
-div.event-box.secondary-color > button {background-color: var(--secondary-color);}
+div.event-box.secondary-color > button {background-color: var(--secondary-color);}*/
+.event-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.event-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.event-info-label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.event-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event-tags span {
+    background-color: lightgray;
+    padding: .5rem;
+    border-radius: .25rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
