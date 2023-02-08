@@ -32,32 +32,6 @@ declare global {
 
 window.user = {data:{id:-1, name:"", nickname:"", password:""}, teams:[], events:[]}
 
-var id;
-if ((id = localStorage.getItem("user_id")) != undefined) {
-  id = parseInt(id)
-    axios.post("https://visoff.ru/api/db/user/getBy/id", {
-      id
-    }).then(
-      response => {
-        window.user.data = response.data
-      }
-    )
-    axios.post("https://visoff.ru/api/db/user/get/teams", {
-      id
-    }).then(
-      response => {
-        window.user.teams = response.data
-      }
-    )
-    axios.post("https://visoff.ru/api/db/user/get/events", {
-      id
-    }).then(
-      response => {
-        window.user.events = response.data
-      }
-    )
-}
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Window />
