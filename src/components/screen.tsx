@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import axios from "axios"
 
 import NavBar from "./nav/bar"
@@ -7,10 +7,10 @@ import Frame from "./frames/father"
 import "./screen.css"
 
 export default function screen() {
-    
-var id;
-if ((id = localStorage.getItem("user_id")) != undefined) {
-  id = parseInt(id)
+    useEffect(() => {
+        
+var id = 1;
+if (true || (id = parseInt(""+localStorage.getItem("user_id"))) != undefined) {
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
@@ -33,6 +33,7 @@ if ((id = localStorage.getItem("user_id")) != undefined) {
       }
     )
 }
+    }, [])
     return (
         <div className="screen">
             <Frame />
