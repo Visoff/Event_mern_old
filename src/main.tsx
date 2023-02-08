@@ -30,30 +30,11 @@ declare global {
   }
 }
 
-window.user = {
-  data:{
-    id:0,
-    name:"Ilya",
-    nickname:"Ilya",
-    password:"123"
-  },
-  teams:[{
-    _id:"12",
-    id:1,
-    name:"123"
-  }],
-  events:[{
-    _id:"123",
-    id:0,
-    name:"12",
-    data:"12"
-  }]
-}
+window.user = {data:{id:-1, name:"", nickname:"", password:""}, teams:[], events:[]}
 
 var id;
 if ((id = localStorage.getItem("user_id")) != undefined) {
   id = parseInt(id)
-  window.user = {data:{id:-1, name:"", nickname:"", password:""}, teams:[], events:[]}
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
