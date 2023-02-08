@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "prod": "cp /home/ilya/private/project/mern/dist /home/ilya/private/project/event_server/httpdocs -r; mv /home/ilya/private/project/event_server/httpdocs/dist /home/ilya/private/project/event_server/httpdocs/ecosystem",
+    "prod": "cp /home/ilya/private/project/mern/dist /home/ilya/private/project/event_server/httpdocs/app -r; mv /home/ilya/private/project/event_server/httpdocs/dist /home/ilya/private/project/event_server/httpdocs/ecosystem",
     "preview": "vite preview"
   },
   "dependencies": {
