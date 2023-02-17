@@ -30,7 +30,7 @@ export default function Registration() {
                         <button type="submit">Дальше</button>
                     </form>
                 </div>
-                <button className={style.bottom}>Уже есть аккаунт? Авторизоваться</button>
+                <button className={style.bottom} onClick={(e) => {setmode("Login")}}>Уже есть аккаунт? Авторизоваться</button>
             </div>
         )
     } else if (mode == "Login") {
@@ -46,7 +46,7 @@ export default function Registration() {
                         <button type="submit">Войти</button>
                     </form>
                 </div>
-                <button className={style.bottom}>Ещё нет аккаунта? Зарегистрироваться</button>
+                <button className={style.bottom} onClick={(e) => {setmode("Registration")}}>Ещё нет аккаунта? Зарегистрироваться</button>
             </div>
         )
     }
