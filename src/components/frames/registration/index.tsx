@@ -12,11 +12,11 @@ export default function Registration() {
                     <form onSubmit={(e) => {e.preventDefault()}}>
                         <h1>Регистрация</h1>
                         <p>Почта</p>
-                        <input type="text" />
+                        <input type="email" placeholder="example@mail.ru" />
                         <p>Пароль</p>
-                        <input type="text" />
+                        <input type="password" placeholder="***********" />
                         <p>Подтверждение пароля</p>
-                        <input type="text" />
+                        <input type="password" placeholder="***********" />
                         <button type="submit">Подтвердить</button>
                     </form>
                 </div>
