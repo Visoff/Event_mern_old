@@ -9,7 +9,7 @@ export default function Registration() {
         return (
             <div className={style.main}>
                 <div className={style.form+(stage == 0 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault()}}>
+                    <form onSubmit={(e) => {e.preventDefault(); setstage(1)}}>
                         <h1>Регистрация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
@@ -21,7 +21,14 @@ export default function Registration() {
                     </form>
                 </div>
                 <div className={style.form+(stage == 1 ? " "+style.current : "")}>
-                    o/
+                    <form onSubmit={(e) => {e.preventDefault(); setstage(2)}}>
+                        <h1>Регистрация</h1>
+                        <p>Имя</p>
+                        <input type="text" placeholder="Иван" />
+                        <p>Фамилия</p>
+                        <input type="text" placeholder="Иванович" />
+                        <button type="submit">Дальше</button>
+                    </form>
                 </div>
             </div>
         )
