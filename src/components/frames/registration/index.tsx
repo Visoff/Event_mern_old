@@ -3,7 +3,9 @@ import { useState } from "react"
 import style from "./index.module.css"
 
 function register(regdata:Object) {
-    console.log(regdata)
+    setTimeout(() => {
+        console.log(regdata)
+    }, 100)
 }
 
 export default function Registration() {
