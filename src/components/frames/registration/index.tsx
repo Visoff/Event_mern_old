@@ -1,9 +1,10 @@
+import axios from "axios"
 import { useState } from "react"
 
 import style from "./index.module.css"
 
 function register(regdata:Object) {
-    console.log(regdata)
+    axios.post("https://visoff.ru/api/db/user")
 }
 
 export default function Registration() {
