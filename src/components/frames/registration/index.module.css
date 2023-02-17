@@ -40,7 +40,7 @@ div.form p {
     font-weight: bold;
 }
 
-div.form input[type="text"] {
+div.form input:not([type="button"]) {
     height: 1.7rem;
     width: calc(100% - 2rem);
     background-color: whitesmoke;
