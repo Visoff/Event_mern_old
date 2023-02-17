@@ -57,4 +57,6 @@ div.form button {
     border-radius: .5rem;
     background-color: var(--main-color);
     color: whitesmoke;
+    align-self: center;
+    margin-top: .5rem;
 }
