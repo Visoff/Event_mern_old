@@ -26,12 +26,13 @@ div.form.current {
 div.form h1 {
     font-size: 1.5rem;
     align-self: center;
+    margin-bottom: .25rem;
 }
 
 div.form > form {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .25rem;
 }
 
 div.form input[type="text"] {
