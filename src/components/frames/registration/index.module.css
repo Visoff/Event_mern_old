@@ -35,6 +35,10 @@ div.form > form {
     gap: .25rem;
 }
 
+div.form form > p {
+    font-size: 1.2rem;
+}
+
 div.form input[type="text"] {
     width: calc(100% - 2rem);
     background-color: whitesmoke;
