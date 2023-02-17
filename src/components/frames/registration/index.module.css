@@ -33,10 +33,12 @@ div.form > form {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    font-weight: bolder;
 }
 
 div.form form > p {
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 div.form input[type="text"] {
