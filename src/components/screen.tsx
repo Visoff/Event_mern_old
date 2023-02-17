@@ -3,14 +3,16 @@ import axios from "axios"
 
 import NavBar from "./nav/bar"
 import Frame from "./frames/father"
+import Registration from "./frames/registration/index"
 
 import "./screen.css"
 
 export default function screen() {
+  const [mode, setmode] = useState("normal")
     useEffect(() => {
         
-var id = 1;
-if (true || (id = parseInt(""+localStorage.getItem("user_id"))) != undefined) {
+var id = -1;
+if ((id = parseInt(""+localStorage.getItem("user_id"))) != undefined) {
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
@@ -32,12 +34,26 @@ if (true || (id = parseInt(""+localStorage.getItem("user_id"))) != undefined) {
         window.user.events = response.data
       }
     )
+} else {
+  setmode("registration")
 }
     }, [])
+    switch (mode) {
+      case "normal":
+        return(
+          <div className="screen">
+              <Frame />
+              <NavBar />
+          </div>
+      )
+      case "registration":
+        return (
+          <div className="screen">
+              <Registration />
+          </div>
+        )
+    }
     return (
-        <div className="screen">
-            <Frame />
-            <NavBar />
-        </div>
+      <div>Initial error</div>
     )
 }
