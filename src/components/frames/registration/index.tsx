@@ -33,4 +33,5 @@ export default function Registration() {
             </div>
         )
     }
+    return (<div>Technical issues</div>)
 }

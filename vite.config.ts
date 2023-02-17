@@ -11,4 +11,5 @@ const https = {
 export default defineConfig({
   server:{https},
   plugins: [react()],
+  publicDir:"/app/"
 })
