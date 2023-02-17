@@ -1,3 +1,14 @@
+import { useState } from "react"
+
+import style from "./index.module.css"
+
 export default function Registration() {
-    return (<div>123</div>)
+    const [mode, setmode] = useState("Registration")
+    if (mode == "Registration") {
+        return (
+            <div className={style.calendar}>
+                123
+            </div>
+        )
+    }
 }
