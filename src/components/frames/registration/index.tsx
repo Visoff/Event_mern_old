@@ -4,7 +4,7 @@ import { useState } from "react"
 import style from "./index.module.css"
 
 function register(regdata:Object) {
-    axios.post("https://visoff.ru/api/db/user/find", {email:regdata}).then(console.log)
+    axios.post("https://visoff.ru/api/db/user/find", {email:(regdata.email)}).then(console.log)
     //axios.post("https://visoff.ru/api/db/user/register", regdata).then(console.log)
 }
 
