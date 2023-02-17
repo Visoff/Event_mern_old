@@ -61,3 +61,15 @@ div.form button {
     align-self: center;
     margin-top: .5rem;
 }
+
+div.main > button.bottom {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+
+    background-color: none;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+}
