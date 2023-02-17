@@ -5,6 +5,7 @@ import style from "./index.module.css"
 export default function Registration() {
     const [mode, setmode] = useState("Registration")
     const [stage, setstage] = useState(0)
+    window.setstage = setstage
     if (mode == "Registration") {
         return (
             <div className={style.main}>
