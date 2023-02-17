@@ -14,7 +14,7 @@ export default function Registration() {
         return (
             <div className={style.main}>
                 <div className={style.form+(stage == 0 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault(); setstage(1); setregdata({...regdata}); console.log(e)}}>
+                    <form onSubmit={(e) => {e.preventDefault(); setstage(1); setregdata({...regdata}); console.log(e.target[0].value)}}>
                         <h1>Регистрация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
