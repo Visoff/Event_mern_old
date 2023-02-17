@@ -23,6 +23,10 @@ div.form.current {
     --offsetX: 0px;
 }
 
+div.form h1 {
+    font-size: 1.5rem;
+}
+
 div.form > form {
     display: flex;
     flex-direction: column;

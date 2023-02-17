@@ -10,6 +10,7 @@ export default function Registration() {
             <div className={style.main}>
                 <div className={style.form+(stage == 0 ? " "+style.current : "")}>
                     <form onSubmit={(e) => {e.preventDefault()}}>
+                        <h1>Регистрация</h1>
                         <p>Почта</p>
                         <input type="text" />
                         <p>Пароль</p>
