@@ -7,7 +7,12 @@ export default function Registration() {
     if (mode == "Registration") {
         return (
             <div className={style.main}>
-                <div className={style.form}></div>
+                <div className={style.form+" "+style.current}>
+                    hello
+                </div>
+                <div className={style.form}>
+                    o/
+                </div>
             </div>
         )
     }
