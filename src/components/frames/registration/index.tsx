@@ -14,7 +14,7 @@ export default function Registration() {
                         <input type="text" />
                         <p>Пароль</p>
                         <input type="text" />
-                        <p>Подтверждение паролья</p>
+                        <p>Подтверждение пароля</p>
                         <input type="text" />
                         <button type="submit">Подтвердить</button>
                     </form>

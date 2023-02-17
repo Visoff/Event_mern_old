@@ -22,3 +22,16 @@ div.form {
 div.form.current {
     --offsetX: 0px;
 }
+
+div.form > form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+div.form input[type="text"] {
+    width: calc(100% - 2rem);
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
