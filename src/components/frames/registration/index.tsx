@@ -7,7 +7,7 @@ export default function Registration() {
     if (mode == "Registration") {
         return (
             <div className={style.main}>
-                123
+                <div className={style.form}></div>
             </div>
         )
     }

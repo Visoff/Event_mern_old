@@ -7,7 +7,17 @@ div.main {
 }
 
 div.form {
-    width: calc(100% - 1rem);
+    --offsetX: 100vw;
+    width: calc(100vw - 1rem);
     padding: .5rem;
     box-shadow: 0px 0px .75rem #000;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + var(--offsetX));
+    transform: translate(-50%, -50%);
+    transition: left .3s;
+}
+
+div.form.current {
+    --offsetX: 0;
 }
