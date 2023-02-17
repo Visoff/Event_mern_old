@@ -6,7 +6,7 @@ export default function Registration() {
     const [mode, setmode] = useState("Registration")
     if (mode == "Registration") {
         return (
-            <div className={style.calendar}>
+            <div className={style.main}>
                 123
             </div>
         )
