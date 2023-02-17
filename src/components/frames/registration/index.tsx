@@ -2,14 +2,19 @@ import { useState } from "react"
 
 import style from "./index.module.css"
 
+function register(regdata:Object) {
+    console.log(regdata)
+}
+
 export default function Registration() {
     const [mode, setmode] = useState("Registration")
+    const [regdata, setregdata] = useState({})
     const [stage, setstage] = useState(0)
     if (mode == "Registration") {
         return (
             <div className={style.main}>
                 <div className={style.form+(stage == 0 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault(); setstage(1)}}>
+                    <form onSubmit={(e) => {e.preventDefault(); setstage(1); setregdata({...regdata}); console.log(e)}}>
                         <h1>Регистрация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
@@ -21,7 +26,7 @@ export default function Registration() {
                     </form>
                 </div>
                 <div className={style.form+(stage == 1 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault(); setstage(2)}}>
+                    <form onSubmit={(e) => {e.preventDefault(); register(regdata)}}>
                         <h1>Регистрация</h1>
                         <p>Имя</p>
                         <input type="text" placeholder="Иван" />
