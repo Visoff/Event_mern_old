@@ -40,7 +40,7 @@ div.form p {
     font-weight: bold;
 }
 
-div.form input[type="text"] {
+div.form input[type="text"], div.form input[type="text"]::placeholder {
     width: calc(100% - 2rem);
     background-color: whitesmoke;
     border: 1px solid black;
