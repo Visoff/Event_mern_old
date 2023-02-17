@@ -44,4 +44,5 @@ div.form input[type="text"] {
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: .5rem;
+    font-size: 1.2rem;
 }
