@@ -13,7 +13,7 @@ export default function screen() {
         
 var id = -1;
 if ((id = parseInt(""+localStorage.getItem("user_id"))) != undefined) {
-  console.log("fetching")
+  console.log("fetching "+id)
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
