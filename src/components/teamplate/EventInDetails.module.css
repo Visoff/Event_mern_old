@@ -84,7 +84,7 @@ div.event-box > button {
     background-color: var(--main-color);
 }
 
-p.tags {
+.details > p {
     display: flex;
     max-width: 10rem;
     flex-wrap: wrap;
