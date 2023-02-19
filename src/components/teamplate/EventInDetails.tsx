@@ -24,7 +24,7 @@ export default function EventInDetails({name, description, color, date, tags, re
             <p>{description}</p>
             <div className={style.details}>
                 <p><strong>Date:</strong> {date}</p>
-                <p><strong>Tags:</strong> {tags.map(el => {return (<div className={style.tag}>el</div>)})}</p>
+                <p><strong>Tags:</strong> {tags.map(el => {return (<div className={style.tag}>{el}</div>)})}</p>
                 <p><strong>Registrations:</strong> {registrationCount_state}</p>
             </div>
             <button className={registered_state?style.registered:style["not-registered"]} onClick={() => {register(!registered_state); set_registrationCount(registrationCount_state+1)}}>
