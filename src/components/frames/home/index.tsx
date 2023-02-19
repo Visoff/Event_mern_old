@@ -8,6 +8,7 @@ export default function HomeFrame() {
         if (events.length == 0) {
             axios.post("https://visoff.ru/api/db/event/find", {}).then(data => {
                 setEvents(data.data)
+                console.log(data.data)
             })
         }
     }, [])
