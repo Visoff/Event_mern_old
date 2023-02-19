@@ -9,7 +9,7 @@ declare global {
     setframe:Function,
     user:{
       data:{
-        id:Number,
+        _id:string,
         name:string,
         nickname:string,
         password:string
@@ -29,7 +29,7 @@ declare global {
   }
 }
 
-window.user = {data:{id:-1, name:"", nickname:"", password:""}, teams:[], events:[]}
+window.user = {data:{_id:"-1", name:"", nickname:"", password:""}, teams:[], events:[]}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

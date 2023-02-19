@@ -34,4 +34,4 @@ div.event > h1.name {
 }
 
 div.event:not(.active) > h1.name {font-size: 1.2rem;}
-div.event.active > h1.name {font-size: 1.5rem;}
+div.event.active > h1.name {font-size: 1.5rem; transform: translate(50vw - 50%, 0);}
