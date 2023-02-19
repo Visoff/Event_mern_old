@@ -6,6 +6,7 @@ import style from "./index.module.css"
 function update(setEvents:Function) {
     axios.post("https://visoff.ru/api/db/event/getBy/admin", {id:window.user.data._id}).then(data => {
         setEvents(data.data)
+        console.log(data.data)
     })
 }
 
