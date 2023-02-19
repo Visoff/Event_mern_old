@@ -28,6 +28,10 @@ div.event {
     transition: height .3s;
 }
 
-div.event:not(.active) > h1.name {
-    font-size: 1.2rem;
+div.event > h1.name {
+    margin: 0;
+    transition: font-size .3s;
 }
+
+div.event:not(.active) > h1.name {font-size: 1.2rem;}
+div.event.active > h1.name {font-size: 1.5rem;}
