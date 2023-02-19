@@ -38,7 +38,7 @@ div.event > h1.name {
 h1.name > input {
     border: none;
     background: none;
-    width: 100%;
+    width: fit-content;
     height: 100%;
 }
 
