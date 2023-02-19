@@ -42,5 +42,6 @@ div.event:not(.active) > form {display: none;}
 div.event.active > form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 form > button.confirm {align-self: center;}
