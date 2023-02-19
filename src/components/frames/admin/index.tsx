@@ -12,7 +12,7 @@ function update(setEvents:Function) {
 
 function event(el:{name?:string}) {
     return (
-        <div className={style.event} onClick={(e) => {(e.target as HTMLElement).classList.add("active")}}>
+        <div className={style.event} onClick={(e) => {(e.target as HTMLElement).classList.add(style.active)}}>
             <h1 className={style.name}>{el.name??"Название"}</h1>
         </div>
         )
