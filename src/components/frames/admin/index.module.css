@@ -35,13 +35,6 @@ div.event > h1.name {
     width: fit-content;
 }
 
-h1.name > input {
-    border: none;
-    background: none;
-    width: fit-content;
-    height: 100%;
-}
-
 div.event:not(.active) > h1.name {font-size: 1.2rem;}
 div.event.active > h1.name {font-size: 1.5rem; transform: translateX(calc(50vw - 1rem - 50%)); font-weight: bolder;}
 
