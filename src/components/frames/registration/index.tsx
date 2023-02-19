@@ -3,7 +3,18 @@ import { useState } from "react"
 
 import style from "./index.module.css"
 
-function register(regdata:Object) {
+interface RegData {
+    email:string,
+    password:string,
+    name:string,
+    lastname:string
+}
+interface LogData {
+    email:string,
+    password:string
+}
+
+function register(regdata:RegData) {
     axios.post("https://visoff.ru/api/db/user/find", {email:(regdata.email)}).then(data => {if (data.data.length == 0) {
             axios.post("https://visoff.ru/api/db/user/register", regdata).then(() => {console.log("Done")})
         } else {
@@ -11,24 +22,24 @@ function register(regdata:Object) {
         }
     })
 }
-function login(regdata:Object) {
+function login(regdata:LogData) {
     axios.post("https://visoff.ru/api/db/user/getBy/emailPass", {email:(regdata.email), password:(regdata.password)}).then(data => {
         if (data.data._id != undefined) {
             localStorage.setItem("user_id", data.data._id)
-            location = location.href
+            location.reload()
         }
     })
 }
 
 export default function Registration() {
     const [mode, setmode] = useState("Registration")
-    var [regdata, setregdata] = useState({})
+    var [regdata, setregdata] = useState({email:"", password:"", name:"", lastname:""})
     const [stage, setstage] = useState(0)
     if (mode == "Registration") {
         return (
             <div className={style.main}>
                 <div className={style.form+(stage == 0 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault(); if (e.target[1].value != e.target[2].value) {return}; setstage(1); setregdata({...regdata, email:e.target[0].value, password:e.target[1].value})}}>
+                    <form onSubmit={(e) => {e.preventDefault(); if (((e.target as HTMLFormElement)[1] as HTMLInputElement).value != ((e.target as HTMLFormElement)[2] as HTMLInputElement).value) {return}; setstage(1); setregdata({...regdata, email:((e.target as HTMLFormElement)[0] as HTMLInputElement).value, password:((e.target as HTMLFormElement)[1] as HTMLInputElement).value})}}>
                         <h1>Регистрация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
@@ -40,7 +51,7 @@ export default function Registration() {
                     </form>
                 </div>
                 <div className={style.form+(stage == 1 ? " "+style.current : "")}>
-                    <form onSubmit={(e) => {e.preventDefault(); setregdata(regdata = {...regdata, name:e.target[0].value, lastname:e.target[1].value}); register(regdata)}}>
+                    <form onSubmit={(e) => {e.preventDefault(); setregdata(regdata = {...regdata, name:((e.target as HTMLFormElement)[0] as HTMLInputElement).value, lastname:((e.target as HTMLFormElement)[1] as HTMLInputElement).value}); register(regdata)}}>
                         <h1>Регистрация</h1>
                         <p>Имя</p>
                         <input type="text" placeholder="Иван" />
@@ -56,7 +67,7 @@ export default function Registration() {
         return (
             <div className={style.main}>
                 <div className={style.form+" "+style.current}>
-                    <form onSubmit={(e) => {e.preventDefault(); login({email:(e.target[0].value), password:(e.target[1].value)})}}>
+                    <form onSubmit={(e) => {e.preventDefault(); login({email:(((e.target as HTMLFormElement)[0] as HTMLInputElement).value), password:(((e.target as HTMLFormElement)[1] as HTMLInputElement).value)})}}>
                         <h1>Авторизация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
