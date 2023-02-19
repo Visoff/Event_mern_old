@@ -15,7 +15,7 @@ export default function event({el}:{el:{}}) {
     const ref = useRef(event.name)
     return (
         <div className={style.event+" "+(active ? style.active : "")} onClick={(e) => {setActive(true)}}>
-            <h1 className={style.name} contentEditable={true} inputMode="text" onInput={(e) => {setEvent({...event, name:(e.target as HTMLElement).textContent})}}>{ref.current??"Название"}</h1>
+            <h1 className={style.name} contentEditable={true} inputMode="text" onInput={(e) => {setEvent({...event, name:(e.target as HTMLElement).textContent})}} dangerouslySetInnerHTML={{__html:(ref.current??"Название")}} />
             <form onSubmit={e => {e.preventDefault(); setActive(false); update(event)}}>
                 <p>Описание: <input type="text" onChange={e => {setEvent({...event, description:e.target.value})}} value={event.description} /></p>
                 <button className={style.confirm}>Сохранить</button>
