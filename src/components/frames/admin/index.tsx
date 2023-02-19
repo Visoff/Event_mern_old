@@ -13,7 +13,10 @@ function update(setEvents:Function) {
 function event(el:{name?:string}) {
     return (
         <div className={style.event} onClick={(e) => {(e.target as HTMLElement).classList.add(style.active)}}>
-            <h1 className={style.name}>{el.name??"Название"}</h1>
+            <h1 className={style.name} contentEditable="true">{el.name??"Название"}</h1>
+            <form onSubmit={e => {e.preventDefault()}}>
+
+            </form>
         </div>
         )
 }
