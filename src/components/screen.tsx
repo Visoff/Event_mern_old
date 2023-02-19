@@ -12,11 +12,12 @@ export default function screen() {
     useEffect(() => {
         
 var id = "";
-if (!Number.isNaN(id = ""+localStorage.getItem("user_id"))) {
+if ((id = ""+localStorage.getItem("user_id")) != "undefined") {
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
       response => {
+        console.log(id, response)
         window.user.data = response.data
       }
     )
