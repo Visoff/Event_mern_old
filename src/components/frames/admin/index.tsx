@@ -11,7 +11,7 @@ function update(setEvents:Function) {
 }
 
 function event(el:{name?:string}) {
-    <div className={style.event}><h1 className={style.name}>{el.name??"Название"}</h1></div>
+    return <div className={style.event}><h1 className={style.name}>{el.name??"Название"}</h1></div>
 }
 
 export default function AdminFrame() {
