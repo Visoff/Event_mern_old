@@ -88,5 +88,6 @@ div.event-box > button {
 p > div.tag {
     display: inline;
     background-color: var(--main-color);
-    padding: .25rem 1rem;
+    padding: .25rem .5rem;
+    border-radius: .5rem;
 }
