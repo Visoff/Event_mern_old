@@ -14,7 +14,7 @@ export default function event({el}:{el:{}}) {
     const [event, setEvent] = useState(el)
     return (
         <div className={style.event+" "+(active ? style.active : "")} onClick={(e) => {setActive(true)}}>
-            <h1 className={style.name} contentEditable="true" onInput={(e) => {setEvent({...event, name:(e.target as HTMLElement).innerText})}}>{event.name??"Название"}</h1>
+            <h1 className={style.name}><input type="text" onChange={(e) => {setEvent({...event, name:(e.target as HTMLElement).innerText})}} value={event.name??"Название"} /></h1>
             <form onSubmit={e => {e.preventDefault(); setActive(false); update(event)}}>
                 <p>Описание: <input type="text" onChange={e => {setEvent({...event, description:e.target.value})}} value={event.description} /></p>
                 <button className={style.confirm}>Сохранить</button>
