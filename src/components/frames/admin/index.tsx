@@ -14,7 +14,7 @@ export default function AdminFrame() {
     const [events, setEvents] = useState([])
     useEffect(() => {
         if (events.length == 0) {update(setEvents)}
-    }, [])}
+    }, [])
     return (
         <div className={style.main}>
             {events.map(el => {return <div>{el.name??"Название"}</div>})}
