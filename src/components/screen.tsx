@@ -12,7 +12,7 @@ export default function screen() {
     useEffect(() => {
         
 var id = "";
-if ((id = ""+localStorage.getItem("user_id")) != "undefined") {
+if ((id = ""+localStorage.getItem("user_id")) != "null") {
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
