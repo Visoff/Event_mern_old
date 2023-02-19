@@ -2,10 +2,8 @@ import { useState } from "react"
 
 import style from "./index.module.css"
 
-export default function event(el:{_id:string, name?:string, description?:string}) {
-    //const [active, setActive] = useState(false)
-    var active = false
-    var setActive = (val) => {active = val}
+export default function event({el}:{el:{}}) {
+    const [active, setActive] = useState(false)
     const [event, setEvent] = useState(el)
     return (
         <div className={style.event+" "+(active ? style.active : "")} onClick={(e) => {setActive(true)}}>
