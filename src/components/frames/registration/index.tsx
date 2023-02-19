@@ -13,7 +13,10 @@ function register(regdata:Object) {
 }
 function login(regdata:Object) {
     axios.post("https://visoff.ru/api/db/user/getBy/emailPass", {email:(regdata.email), password:(regdata.password)}).then(data => {
-        console.log("user_id", data.data._id)
+        if (data.data._id != undefined) {
+            localStorage.setItem("user_id", data.data._id)
+            location = location.href
+        }
     })
 }
 
