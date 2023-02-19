@@ -48,3 +48,6 @@ div.event.active > form {
     font-weight: bold;
 }
 form > button.confirm {align-self: center;}
+
+form > input {
+}
