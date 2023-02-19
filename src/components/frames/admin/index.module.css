@@ -6,7 +6,10 @@ div.main {
 }
 
 button.add {
+    font-size: 1.5rem;
+    color: var(--white);
     background-color: var(--main-color);
     padding: .5rem .25rem;
     border-radius: 1rem;
+    border: none;
 }
