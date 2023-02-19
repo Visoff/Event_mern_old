@@ -28,7 +28,7 @@ export default function EventInDetails({name, description, color, date, tags, re
                 <p><strong>Registrations:</strong> {registrationCount_state}</p>
             </div>
             <button className={registered_state?"registered":"not-registered"} onClick={() => {register(!registered_state); set_registrationCount(registrationCount_state+1)}}>
-                {registered_state?"Зарегистрировано":"Зарегистрироваться"}
+                {registered_state?"Иду":"Пойду"}
             </button>
         </div>
     )
