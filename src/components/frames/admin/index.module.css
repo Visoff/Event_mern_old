@@ -30,7 +30,7 @@ div.event {
 
 div.event > h1.name {
     margin: 0;
-    transition: font-size .3s;
+    transition: font-size .3s, transform .3s;
 }
 
 div.event:not(.active) > h1.name {font-size: 1.2rem;}
