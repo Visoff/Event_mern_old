@@ -35,3 +35,6 @@ div.event > h1.name {
 
 div.event:not(.active) > h1.name {font-size: 1.2rem;}
 div.event.active > h1.name {font-size: 1.5rem; transform: translateX(calc(50vw - 1rem - 50%));}
+
+
+div.event:not(.active) > form {display: none;}
