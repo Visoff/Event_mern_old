@@ -12,7 +12,9 @@ function update(setEvents:Function) {
 
 function updateEvent(eventEl:HTMLElement) {
     var name = eventEl.querySelector("h1."+style.name)?.innerText
-    console.log(name)
+    var form = eventEl.querySelector("form") as HTMLFormElement
+    var description = (form[0] as HTMLInputElement).value
+    console.log({name, description})
 }
 
 function event(el:{name?:string}) {
