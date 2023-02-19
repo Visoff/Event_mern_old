@@ -85,7 +85,14 @@ div.event-box > button {
     background-color: var(--main-color);
 }
 
-p > div.tag {
+p.tags {
+    display: flex;
+    max-width: 10rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+p.tags > div.tag {
     display: inline;
     background-color: var(--main-color);
     padding: .125rem .5rem;
