@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --emptyOutDir",
     "prod": "rm -r /home/ilya/private/project/event_server/httpdocs/app; cp /home/ilya/private/project/dist/app /home/ilya/private/project/event_server/httpdocs -r",
     "preview": "vite preview"
   },
