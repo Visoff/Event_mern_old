@@ -17,7 +17,6 @@ if ((id = ""+localStorage.getItem("user_id")) != "undefined") {
       id
     }).then(
       response => {
-        console.log(id, response)
         window.user.data = response.data
       }
     )
