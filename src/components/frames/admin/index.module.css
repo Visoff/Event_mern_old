@@ -16,8 +16,9 @@ button.add {
 }
 
 div.event {
-    width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
     height: fit-content;
+    border-radius: 1rem;
     box-shadow: 0px 0px .75rem #000;
     padding: .5rem;
     display: flex;
