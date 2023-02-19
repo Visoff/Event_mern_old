@@ -87,6 +87,8 @@ div.event-box > button {
 
 p > div.tag {
     display: contents;
+    width: fit-content;
+    height: fit-content;
     background-color: var(--main-color);
     padding: 1rem .25rem;
 }
