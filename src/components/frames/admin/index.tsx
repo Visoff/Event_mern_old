@@ -3,13 +3,15 @@ import axios from "axios"
 
 import style from "./index.module.css"
 
-function update() {
-    axios.post("https://visoff.ru/api/db/event/getBy/admin", {id:window.user.data._id})
+function update(setEvents:Function) {
+    axios.post("https://visoff.ru/api/db/event/getBy/admin", {id:window.user.data._id}).then(data => {
+        setEvents(data.data)
+    })
 }
 
 export default function AdminFrame() {
     const [events, setEvents] = useState([])
-    useEffect(update)
+    useEffect(() => {update(setEvents)}, [setEvents])
     return (
         <div className={style.main}>
             {events.map(el => {return <div>{el.name??"Название"}</div>})}
