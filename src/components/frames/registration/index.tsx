@@ -53,7 +53,7 @@ export default function Registration() {
         return (
             <div className={style.main}>
                 <div className={style.form+" "+style.current}>
-                    <form onSubmit={(e) => {e.preventDefault(); setstage(1)}}>
+                    <form onSubmit={(e) => {e.preventDefault(); login({email:(e.target[0].value), password:(e.target[1].value)})}}>
                         <h1>Авторизация</h1>
                         <p>Почта</p>
                         <input type="email" placeholder="example@mail.ru" />
