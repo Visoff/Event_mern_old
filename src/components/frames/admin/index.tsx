@@ -12,7 +12,7 @@ function update(setEvents:Function) {
 
 export default function AdminFrame() {
     const [events, setEvents] = useState([])
-    useEffect(() => {update(setEvents)}, [setEvents])
+    update(setEvents)
     return (
         <div className={style.main}>
             {events.map(el => {return <div>{el.name??"Название"}</div>})}
