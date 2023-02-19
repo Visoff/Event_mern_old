@@ -11,8 +11,8 @@ export default function screen() {
   const [mode, setmode] = useState("normal")
     useEffect(() => {
         
-var id = -1;
-if (!Number.isNaN(id = parseInt(""+localStorage.getItem("user_id")))) {
+var id = "";
+if (!Number.isNaN(id = ""+localStorage.getItem("user_id"))) {
     axios.post("https://visoff.ru/api/db/user/getBy/id", {
       id
     }).then(
