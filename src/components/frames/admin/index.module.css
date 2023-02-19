@@ -39,3 +39,8 @@ div.event.active > h1.name {font-size: 1.5rem; transform: translateX(calc(50vw -
 
 
 div.event:not(.active) > form {display: none;}
+div.event.active > form {
+    display: flex;
+    flex-direction: column;
+}
+form > button.confirm {align-self: center;}
