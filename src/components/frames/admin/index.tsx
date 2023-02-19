@@ -15,7 +15,8 @@ function event(el:{name?:string}) {
         <div className={style.event} onClick={(e) => {(e.target as HTMLElement).classList.add(style.active)}}>
             <h1 className={style.name} contentEditable="true">{el.name??"Название"}</h1>
             <form onSubmit={e => {e.preventDefault()}}>
-                <p>Описание: <input type="text" /></p>
+                <p>Описание: <input type="text" value={el.description}/></p>
+                <button className={style.confirm}>Сохранить</button>
             </form>
         </div>
         )

@@ -6,7 +6,8 @@ div.main {
     gap: .5rem;
 }
 
-button.add {
+button.add,
+div.event:not(.active) > form > button.confirm {
     font-size: 1.5rem;
     color: var(--white);
     background-color: var(--main-color);
