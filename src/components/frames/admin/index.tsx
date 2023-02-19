@@ -12,7 +12,7 @@ export default function AdminFrame() {
     useEffect(update)
     return (
         <div className={style.main}>
-            {events.map(el => {return <div>{el.name}</div>})}
+            {events.map(el => {return <div>{el.name??"Название"}</div>})}
             <button className={style.add} onClick={(e) => {
                 axios.post("https://visoff.ru/api/db/event/create", {admins:[window.user.data._id]})
             }}>Добавить</button>
