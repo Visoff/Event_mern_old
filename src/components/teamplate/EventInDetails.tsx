@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./EventInDetails.css"
+import style from "./EventInDetails.module.css"
 
 interface Props {
     name:string,
@@ -12,9 +12,9 @@ interface Props {
 }
 
 export default function EventInDetails({name, description, color, date, tags, registered, registrationCount}:Props) {
-    var classgen = "event-box"
+    var classgen = style["event-box"]
     if (color == "secondary") {
-        classgen+=" secondary-color"
+        classgen+=" "+style["secondary-color"]
     }
     const [registered_state, register] = useState(registered)
     const [registrationCount_state, set_registrationCount] = useState(registrationCount)
@@ -22,12 +22,12 @@ export default function EventInDetails({name, description, color, date, tags, re
         <div className={classgen}>
             <h1>{name}</h1>
             <p>{description}</p>
-            <div className="details">
+            <div className={style.details}>
                 <p><strong>Date:</strong> {date}</p>
-                <p><strong>Tags:</strong> {tags.join(", ")}</p>
+                <p><strong>Tags:</strong> {(tags.map(el => {return <div className={style.tag}>el</div>})).join(", ")}</p>
                 <p><strong>Registrations:</strong> {registrationCount_state}</p>
             </div>
-            <button className={registered_state?"registered":"not-registered"} onClick={() => {register(!registered_state); set_registrationCount(registrationCount_state+1)}}>
+            <button className={registered_state?style.registered:style["not-registered"]} onClick={() => {register(!registered_state); set_registrationCount(registrationCount_state+1)}}>
                 {registered_state?"Иду":"Пойду"}
             </button>
         </div>
