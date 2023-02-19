@@ -17,7 +17,7 @@ export default function AdminFrame() {
     }, [])
     return (
         <div className={style.main}>
-            {events.map(el => {return <div>{el.name??"Название"}</div>})}
+            {events.map(el => {return <div className={style.event}>{el.name??"Название"}</div>})}
             <button className={style.add} onClick={(e) => {
                 axios.post("https://visoff.ru/api/db/event/create", {admins:[window.user.data._id]})
             }}>Добавить</button>
