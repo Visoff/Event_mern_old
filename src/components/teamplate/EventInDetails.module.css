@@ -13,7 +13,7 @@ div.event-box-parent {
 div.event-box {
     padding: .5rem;
 
-    height: 14rem;
+    max-height: 14rem;
 
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
