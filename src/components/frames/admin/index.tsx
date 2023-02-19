@@ -17,12 +17,14 @@ function updateEvent(eventEl:HTMLElement) {
     console.log({name, description})
 }
 
-function event(el:{name?:string}) {
+function event(el:{_id:string, name?:string, description?:string}) {
+    const [active, setActive] = useState(false)
+    const [event, setEvent] = useState(el)
     return (
-        <div className={style.event} onClick={(e) => {(e.target as HTMLElement).classList.add(style.active)}}>
-            <h1 className={style.name} contentEditable="true">{el.name??"Название"}</h1>
-            <form onSubmit={e => {e.preventDefault(); updateEvent(((e.target as HTMLElement).parentElement as HTMLElement))}}>
-                <p>Описание: <input type="text" onLoad={e => {this.value = el.description??""}}/></p>
+        <div className={style.event+" "+(active ? style.active : "")} onClick={(e) => {setActive(true)}}>
+            <h1 className={style.name} contentEditable="true" onChange={(e) => {setEvent({...event, name:(e.target as HTMLElement).innerText})}}>{event.name??"Название"}</h1>
+            <form onSubmit={e => {e.preventDefault(); setActive(false);}}>
+                <p>Описание: <input type="text" onChange={e => {setEvent({...event, description:e.target.value})}} value={event.description} /></p>
                 <button className={style.confirm}>Сохранить</button>
             </form>
         </div>
