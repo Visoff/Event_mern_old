@@ -92,7 +92,7 @@ div.event-box > button {
     gap: .1rem;
 }
 
-p.tags > div.tag {
+div.tag {
     display: inline;
     background-color: var(--main-color);
     padding: .125rem .5rem;
