@@ -18,8 +18,7 @@ const Calendar = () => {
     const days = [];
     const dateCopy = new Date(date);
     dateCopy.setDate(1);
-    const firstDayOfMonth = dateCopy.getDay();
-    const offset = (firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1);
+    const offset = (dateCopy.getDay() + 5)%7;
     dateCopy.setDate(1 - offset);
   
     function click(dateCopy: string) {
