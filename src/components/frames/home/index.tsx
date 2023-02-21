@@ -5,19 +5,17 @@ import Search from "./Search"
 
 import style from "./index.module.css"
 
-
 export default function HomeFrame() {
-    function fetchEvent() {
-        axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
-            setEvents(data.data)
-        })
-    }
     const [events, setEvents] = useState([])
-    const [Query, setQueryRaw] = useState({})
+    const [Query, setQuery] = useState({})
     useEffect(() => {
-        if (events.length == 0) {fetchEvent()}
-    }, [])
-    const setQuery = (arg:any) => {setQueryRaw(arg); fetchEvent()}
+        const inter = setInterval(() => {
+            axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
+                setEvents(data.data)
+            })
+        }, 500)
+        return () => {clearInterval(inter)}
+    }, [events])
     return (
         <div className={style.main}>
             <Search setQuery={setQuery} />
