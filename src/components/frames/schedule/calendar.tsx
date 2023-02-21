@@ -22,8 +22,14 @@ const Calendar = () => {
     dateCopy.setDate(1 - offset);
 
     function click(dateCopy:string) {
-      return function (e) {
-          console.log(dateCopy);
+      return function (e:any) {
+        if ((e.target as HTMLElement).classList.contains("other-month")) {
+          if (new Date(dateCopy).getMonth() > date.getMonth()) {
+            handleNextMonth()
+          } else {
+            handlePrevMonth()
+          }
+        }
           setSelectedDate(new Date(dateCopy))
         }
     }
