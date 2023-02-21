@@ -25,6 +25,10 @@ div.calendar td.other-month {
     color: #BFBFBF;
 }
 
+div.calendar td {
+    text-align: center;
+}
+
 div.calendar td.selected {
     background-color: red;
 }
