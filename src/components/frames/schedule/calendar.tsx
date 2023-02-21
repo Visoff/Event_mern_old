@@ -21,13 +21,20 @@ const Calendar = () => {
     const offset = dateCopy.getDay();
     dateCopy.setDate(1 - offset);
 
+    function click(dateCopy:Date) {
+      return function (e:any) {
+        console.log(dateCopy);
+        setSelectedDate(new Date(dateCopy))
+      }
+    }
+
     for (let i = 0; i < 42; i++) {
       dateCopy.setDate(dateCopy.getDate() + 1);
       const currentDay = dateCopy.getDate();
       const currentMonth = dateCopy.getMonth();
 
       days.push(
-        <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} onClick={Function('e', `console.log(${dateCopy}); setSelectedDate(new Date(${dateCopy}))`)/* as MouseEventHandler<HTMLTableDataCellElement>*/} >
+        <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} onClick={click(dateCopy)} >
           {currentDay}
         </td>
       );
