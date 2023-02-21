@@ -1,7 +1,8 @@
 import style from "./Search.module.css"
 
 function change(e) {
-    setTimeout(() => {
+    if (timeout != undefined) {clearTimeout(timeout)}
+    timeout = setTimeout(() => {
         console.log(123)
     }, 1000)
 }
