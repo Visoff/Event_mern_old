@@ -27,7 +27,7 @@ const Calendar = () => {
       const currentMonth = dateCopy.getMonth();
 
       days.push(
-        <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} >
+        <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} onClick={(new Function('e', `console.log(${dateCopy})`) as MouseEventHandler<HTMLTableDataCellElement>)} >
           {currentDay}
         </td>
       );
