@@ -23,8 +23,8 @@ const Calendar = () => {
 
     function click(dateCopy:Date) {
       return new Function('e', ""+
-        "console.log(dateCopy);"+
-        "setSelectedDate(new Date(dateCopy))"
+        `console.log(${dateCopy});`+
+        `setSelectedDate(new Date(${dateCopy}))`
         )
     }
 
