@@ -12,12 +12,12 @@ div.main {
 
 div.main > input {
     position: absolute;
-    top: 0;
+    top: .5rem;
     left: 0;
     width: calc(100% - .5rem);
     height: 2rem;
     border: none;
     border-radius: 1rem;
     font-size: 1rem;
-    padding: .5rem .25rem;
+    padding: 0 .25rem;
 }
