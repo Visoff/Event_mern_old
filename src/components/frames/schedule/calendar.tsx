@@ -2,9 +2,8 @@ import React, { EventHandler, MouseEventHandler, useState } from 'react';
 
 import "./calendar.css"
 
-const Calendar = () => {
+const Calendar = ({date:[selectedDate, setSelectedDate]}:{date:[Date, Function]}) => {
   const [date, setDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handlePrevMonth = () => {
     setDate(prevDate => new Date(prevDate.getFullYear(), prevDate.getMonth() - 1));
