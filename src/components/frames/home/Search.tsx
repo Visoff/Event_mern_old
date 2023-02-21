@@ -1,7 +1,9 @@
+import style from "./Search.module.css"
+
 export default function Search() {
     return (
-        <div>
-            123
+        <div className={style.main}>
+            <input type="text" />
         </div>
     )
 }

@@ -1,0 +1,11 @@
+div.main {
+    height: fit-content;
+    width: calc(100% - 2rem);
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
