@@ -13,7 +13,7 @@ function update(setEvents:Function) {
 }
 
 function updateEvent(eventEl:HTMLElement) {
-    var name = eventEl.querySelector("h1."+style.name)?.innerText
+    var name = eventEl.querySelector("h1."+style.name)?.textContent
     var form = eventEl.querySelector("form") as HTMLFormElement
     var description = (form[0] as HTMLInputElement).value
     console.log({name, description})
@@ -26,7 +26,7 @@ export default function AdminFrame() {
     }, [])
     return (
         <div className={style.main}>
-            {events.map(el => {return (<Event el={el} key={el._id} />)})}
+            {events.map((el:{_id:string, name:string|null, description:string}) => {return (<Event el={el} key={el._id} />)})}
             <button className={style.add} onClick={(e) => {
                 axios.post("https://visoff.ru/api/db/event/create", {admins:[window.user.data._id]})
             }}>Добавить</button>
