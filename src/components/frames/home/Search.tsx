@@ -1,7 +1,9 @@
 import style from "./Search.module.css"
 
 function change(e) {
-    console.log(e)
+    setTimeout(() => {
+        console.log(123)
+    })
 }
 
 export default function Search() {
