@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"
 import EventInDetails from "../../teamplate/EventInDetails"
 import Search from "./Search"
 
+import style from "./index.module.css"
+
 export default function HomeFrame() {
     const [events, setEvents] = useState([])
     useEffect(() => {
@@ -13,9 +15,11 @@ export default function HomeFrame() {
         }
     }, [])
     return (
-        <div className="event-box-parent">
+        <div className={style.main}>
             <Search />
-            {events.map((el:{_id:string, name:string, description:string, date:string, tags:string[]}) => {return <EventInDetails key={el._id} name={el.name??"Название"} description={el.description??"Описание"} date={el.date??"12.12.22"} tags={el.tags??[]} />})}
+            <div className="event-box-parent">
+                {events.map((el:{_id:string, name:string, description:string, date:string, tags:string[]}) => {return <EventInDetails key={el._id} name={el.name??"Название"} description={el.description??"Описание"} date={el.date??"12.12.22"} tags={el.tags??[]} />})}
+            </div>
         </div>
     )
 }
