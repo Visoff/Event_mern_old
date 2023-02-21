@@ -1,6 +1,6 @@
 div.calendar {
     width: calc(100% - 2.5rem);
-    height: 20rem;
+    min-height: 20rem;
     margin: .5rem;
     background-color: var(--main-color);
     border-radius: .5rem;
@@ -8,6 +8,7 @@ div.calendar {
     font-size: 1.25rem;
     display: grid;
     place-items: center;
+    aspect-ratio: 1.34;
 }
 
 div.calendar > table {width: 100%; height: 100%;}
