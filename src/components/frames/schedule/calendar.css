@@ -30,5 +30,6 @@ div.calendar td {
 }
 
 div.calendar td.selected {
-    background-color: red;
+    border-radius: .5rem;
+    border: 1px solid var(--white);
 }
