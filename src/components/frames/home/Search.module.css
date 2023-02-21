@@ -28,7 +28,7 @@ button.more {
     right: 0;
     height: 2rem;
     aspect-ratio: 1;
-    border-radius: 50%;
+    border-radius: 1rem;
     background-color: var(--main-color);
     border: none;
     color: var(--white);
