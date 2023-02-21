@@ -1,5 +1,5 @@
 div.main {
-    height: fit-content;
+    height: calc(1rem + 2px);
     width: calc(100% - 2rem);
     margin-top: .5rem;
     margin-left: 1rem;
