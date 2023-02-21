@@ -13,7 +13,7 @@ div.main {
 div.main > input {
     position: absolute;
     top: -.05rem;
-    left: -.05rem;
+    left: 0;
     width: calc(100% - .5rem);
     border: none;
     border-radius: 1rem;
