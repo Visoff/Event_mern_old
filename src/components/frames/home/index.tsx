@@ -15,7 +15,7 @@ export default function HomeFrame() {
             })
         }, 1000)
         return clearInterval(inter)
-    }, [events])
+    }, [events, setEvents])
     return (
         <div className={style.main}>
             <Search setQuery={setQuery} />
