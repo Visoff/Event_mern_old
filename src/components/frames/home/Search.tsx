@@ -2,13 +2,17 @@ import { useState } from "react"
 import style from "./Search.module.css"
 
 
-export default function Search() {
+export default function Search({setQuery}:{setQuery:Function}) {
     const [timer, settimer] = useState<number>(NaN)
 
     function change(e: React.ChangeEvent<HTMLInputElement>) {
         clearTimeout(timer)
         var timeout = setTimeout(() => {
-            console.log(e.target.value)
+            setQuery((prev:Object) => {return {...prev,
+                name:{
+                    "$regex": e.target.value,
+                    "$options": "i"
+              }}})
         }, 1000)
         settimer(timeout as any)
     }
