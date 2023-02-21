@@ -12,7 +12,7 @@ div.main {
 
 div.main > input {
     position: absolute;
-    top: .5rem;
+    top: 0;
     left: 0;
     width: calc(100% - .5rem);
     height: 2rem;
