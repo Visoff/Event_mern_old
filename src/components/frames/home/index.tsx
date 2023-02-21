@@ -9,11 +9,12 @@ export default function HomeFrame() {
     const [events, setEvents] = useState([])
     const [Query, setQuery] = useState({})
     useEffect(() => {
-        if (events.length == 0) {
+        const inter = setInterval(() => {
             axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
                 setEvents(data.data)
             })
-        }
+        }, 1000)
+        return clearInterval(inter)
     }, [])
     return (
         <div className={style.main}>
