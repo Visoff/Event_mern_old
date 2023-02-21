@@ -3,7 +3,7 @@ import style from "./Search.module.css"
 function change(e) {
     setTimeout(() => {
         console.log(123)
-    })
+    }, 1000)
 }
 
 export default function Search() {
