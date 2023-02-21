@@ -22,11 +22,9 @@ const Calendar = () => {
     dateCopy.setDate(1 - offset);
 
     function click(dateCopy:Date) {
-      const f = ""+
-      "console.log("+dateCopy.toString()+");"+
-      "setSelectedDate(new Date("+dateCopy.toString()+"}))"
-      console.log(f)
-      return new Function('e', f
+      return new Function('e', ""+
+        `console.log("${dateCopy}");`+
+        `setSelectedDate(new Date("${dateCopy}"))`
         )
     }
 
