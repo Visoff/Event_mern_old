@@ -24,3 +24,7 @@ div.calendar thead th:has(div) {
 div.calendar td.other-month {
     color: #BFBFBF;
 }
+
+div.calendar td.selected {
+    background-color: red;
+}
