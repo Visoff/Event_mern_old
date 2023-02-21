@@ -12,8 +12,8 @@ div.main {
 
 div.main > input {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -.1rem;
+    left: -.1rem;
     width: 100%;
     border: none;
     border-radius: 1rem;
