@@ -5,7 +5,7 @@ div.main {
     margin-left: 1rem;
     margin-bottom: 1rem;
 
-    position: absolute;
+    position: relative;
     border: 1px solid black;
     border-radius: 1rem;
 }
