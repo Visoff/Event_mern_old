@@ -13,10 +13,9 @@ export default function HomeFrame() {
             axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
                 setEvents(data.data)
             })
-            console.log(Query)
         }, 1000)
-        return clearInterval(inter)
-    }, [events, setEvents])
+        return () => {clearInterval(inter)}
+    }, [events])
     return (
         <div className={style.main}>
             <Search setQuery={setQuery} />
