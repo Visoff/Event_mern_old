@@ -18,34 +18,49 @@ const Calendar = () => {
     const days = [];
     const dateCopy = new Date(date);
     dateCopy.setDate(1);
-    const offset = (dateCopy.getDay() + 6)%7;
+    const firstDayOfMonth = dateCopy.getDay();
+    const offset = (firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1);
     dateCopy.setDate(1 - offset);
-
-    function click(dateCopy:string) {
-      return function (e:any) {
+  
+    function click(dateCopy: string) {
+      return function (e: any) {
         if ((e.target as HTMLElement).classList.contains("other-month")) {
           if (new Date(dateCopy).getMonth() > date.getMonth()) {
-            handleNextMonth()
+            handleNextMonth();
           } else {
-            handlePrevMonth()
+            handlePrevMonth();
           }
         }
-          setSelectedDate(new Date(dateCopy))
-        }
+        setSelectedDate(new Date(dateCopy));
+      };
     }
-
+  
     for (let i = 0; i < 42; i++) {
       dateCopy.setDate(dateCopy.getDate() + 1);
       const currentDay = dateCopy.getDate();
       const currentMonth = dateCopy.getMonth();
-
+  
       days.push(
-        <td key={i} className={`calendar-day ${currentMonth === date.getMonth() ? 'current-month' : 'other-month'} ${selectedDate && selectedDate.getDate() === currentDay && selectedDate.getMonth() === currentMonth ? 'selected' : ''}`} onClick={click(dateCopy.toString())} >
+        <td
+          key={i}
+          className={`calendar-day ${
+            currentMonth === date.getMonth()
+              ? "current-month"
+              : "other-month"
+          } ${
+            selectedDate &&
+            selectedDate.getDate() === currentDay &&
+            selectedDate.getMonth() === currentMonth
+              ? "selected"
+              : ""
+          }`}
+          onClick={click(dateCopy.toString())}
+        >
           {currentDay}
         </td>
       );
     }
-
+  
     return days;
   };
 
