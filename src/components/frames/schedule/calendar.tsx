@@ -18,7 +18,7 @@ const Calendar = () => {
     const days = [];
     const dateCopy = new Date(date);
     dateCopy.setDate(1);
-    const offset = (dateCopy.getDay() + 7)&7;
+    const offset = dateCopy.getDay();
     dateCopy.setDate(0 - offset);
 
     function click(dateCopy:string) {
