@@ -31,7 +31,7 @@ export default function event({el}:{el:{name:string|null, description:string}}) 
                 <div className={style.subdir}>
                     <p>Расписание</p>
                     <div>
-                        {schedule.map(el => {return <p>{el}</p>})}
+                        {schedule.map(el => {return <p>{JSON.stringify(el)}</p>})}
                     </div>
                 </div>
                 <button className={style.confirm}>Сохранить</button>
