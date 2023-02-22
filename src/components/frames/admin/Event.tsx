@@ -16,11 +16,12 @@ export default function event({el}:{el:{name:string|null, description:string, da
     const ref = useRef(event.name)
 
     useEffect(() => {
-        setInterval(() => {
+        const inter = setInterval(() => {
             axios.post("https://visoff.ru/api/db/event/schedule/", {id:(el as any)._id}).then(data => {
                 setSchedule(data.data)
             })
         }, 1000)
+        return () => {clearInterval(inter)}
     }, [schedule])
 
     return (
