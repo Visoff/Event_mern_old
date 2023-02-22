@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import style from "./index.module.css"
 
@@ -9,14 +9,20 @@ function update(event:Object) {
     })
 }
 
-function schedule(el:any) {
-    return [1, 2, 3]
-}
-
 export default function event({el}:{el:{name:string|null, description:string}}) {
     const [active, setActive] = useState(false)
     const [event, setEvent] = useState(el)
+    const [schedule, setSchedule] = useState([])
     const ref = useRef(event.name)
+
+    useEffect(() => {
+        setInterval(() => {
+            axios.post("https://visoff.ru/api/db/event/schedule/", {id:(el as any)._id}).then(data => {
+                setSchedule(data.data)
+            })
+        }, 1000)
+    }, [schedule])
+
     return (
         <div className={style.event+" "+(active ? style.active : "")} onClick={(e) => {setActive(true)}}>
             <h1 className={style.name} contentEditable={true} inputMode="text" onInput={(e) => {setEvent({...event, name:(e.target as HTMLElement).textContent})}} dangerouslySetInnerHTML={{__html:(ref.current??"Название")}} />
@@ -25,7 +31,7 @@ export default function event({el}:{el:{name:string|null, description:string}}) 
                 <div className={style.subdir}>
                     <p>Расписание</p>
                     <div>
-                        {schedule(el).map(el => {return <p>{el}</p>})}
+                        {schedule.map(el => {return <p>{el}</p>})}
                     </div>
                 </div>
                 <button className={style.confirm}>Сохранить</button>
