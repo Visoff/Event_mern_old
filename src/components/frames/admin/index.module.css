@@ -56,4 +56,5 @@ form div.subdir {
     border: .1rem solid var(--main-color);
     border-radius: 1rem;
     width: fit-content;
+    margin-bottom: .5rem;
 }
