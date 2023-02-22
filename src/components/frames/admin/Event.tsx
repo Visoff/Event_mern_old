@@ -9,6 +9,10 @@ function update(event:Object) {
     })
 }
 
+function schedule(el:any) {
+    return [1, 2, 3]
+}
+
 export default function event({el}:{el:{name:string|null, description:string}}) {
     const [active, setActive] = useState(false)
     const [event, setEvent] = useState(el)
@@ -20,6 +24,9 @@ export default function event({el}:{el:{name:string|null, description:string}}) 
                 <p>Описание: <input type="text" onChange={e => {setEvent({...event, description:e.target.value})}} value={event.description} /></p>
                 <div className={style.subdir}>
                     <p>Расписание</p>
+                    <div>
+                        {schedule(el).map(el => {return <p>{el}</p>})}
+                    </div>
                 </div>
                 <button className={style.confirm}>Сохранить</button>
             </form>
