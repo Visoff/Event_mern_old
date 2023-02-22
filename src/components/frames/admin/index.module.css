@@ -49,5 +49,7 @@ div.event.active > form {
 }
 form > button.confirm {align-self: center;}
 
-form > input {
+form p.subdir {
+    padding: .5rem 0;
+    border: .1rem solid var(--main-color);
 }
