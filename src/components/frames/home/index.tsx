@@ -20,7 +20,7 @@ export default function HomeFrame() {
         <div className={style.main}>
             <Search setQuery={setQuery} />
             <div className="event-box-parent">
-                {events.map((el:{_id:string, name:string, description:string, date:string, tags:string[]}) => {return <EventInDetails key={el._id} name={el.name??"Название"} description={el.description??"Описание"} date={el.date??"12.12.22"} tags={el.tags??[]} />})}
+                {events.map((el:{_id:string, name:string, description:string, date:string, tags:string[]}) => {return <EventInDetails key={el._id} _id={el._id} name={el.name??"Название"} description={el.description??"Описание"} date={el.date??"12.12.22"} tags={el.tags??[]} />})}
             </div>
         </div>
     )
