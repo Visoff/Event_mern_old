@@ -54,6 +54,9 @@ form div.subdir {
     border: .1rem solid var(--main-color);
     border-radius: 1rem;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
-form div.subdir > p {margin: 0;}
+form div.subdir > p {margin: 0; align-self: flex-start;}
