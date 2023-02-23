@@ -10,10 +10,9 @@ export default function HomeFrame() {
     const [Query, setQuery] = useState({})
     useEffect(() => {
         const inter = setInterval(() => {
-            window.findEvent = (Query) => {axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
-                return data.data
-            })}
-            setEvents(window.findEvent(Query))
+            axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
+                setEvents(data.data)
+            })
         }, 500)
         return () => {clearInterval(inter)}
     }, [events])
