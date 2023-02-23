@@ -8,6 +8,7 @@ import style from "./index.module.css"
 export default function HomeFrame() {
     const [events, setEvents] = useState([])
     const [Query, setQuery] = useState({})
+    window.setQuery = setQuery
     useEffect(() => {
         const inter = setInterval(() => {
             axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
