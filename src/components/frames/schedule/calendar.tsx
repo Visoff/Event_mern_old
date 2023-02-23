@@ -54,7 +54,10 @@ const Calendar = ({events, date:[selectedDate, setSelectedDate]}:{events:any, da
           } ${
             selectedDate &&
             events.length > 0  &&
-            events.map((el:any) => {return new Date(el.date).toLocaleDateString()}).includes(selectedDate.toLocaleDateString())
+            events.some((el:any) => {
+              var date = new Date(el.date)
+              return date.getDate() == currentDay && date.getMonth() == currentMonth
+            })
               ? "event"
               : ""
           }`}
