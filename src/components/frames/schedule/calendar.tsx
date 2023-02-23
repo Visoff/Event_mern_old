@@ -55,7 +55,6 @@ const Calendar = ({events, date:[selectedDate, setSelectedDate]}:{events:any, da
             events.length > 0  &&
             events.some((el:any) => {
               var date = new Date(el.date)
-              console.log(date, currentDay, currentMonth)
               return date.getDate() == currentDay && date.getMonth() == currentMonth
             })
               ? "event"
