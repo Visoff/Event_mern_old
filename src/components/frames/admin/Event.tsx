@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react"
 
 import style from "./index.module.css"
 
-function update(event:Object) {
+function update(event:any) {
+    delete event.members
     axios.post("https://visoff.ru/api/db/event/updateOne", event).then((data) => {
         if (data.data == "ok") {console.log("updated")} else {console.log("moron")}
     })
