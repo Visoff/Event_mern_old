@@ -53,6 +53,7 @@ const Calendar = ({events, date:[selectedDate, setSelectedDate]}:{events:any, da
               : ""
           } ${
             selectedDate &&
+            events &&
             events.contains({date:selectedDate.toString()})
               ? "selected"
               : ""
