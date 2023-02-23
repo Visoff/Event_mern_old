@@ -54,7 +54,7 @@ const Calendar = ({events, date:[selectedDate, setSelectedDate]}:{events:any, da
           } ${
             selectedDate &&
             events.length > 0  &&
-            events.map(el => {return new Date(el.date).toISOString()}).includes(selectedDate.toISOString())
+            events.map(el => {return new Date(el.date).toLocaleDateString()}).includes(selectedDate.toLocaleDateString())
               ? "selected"
               : ""
           }`}
