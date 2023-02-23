@@ -37,6 +37,8 @@ div.calendar td.selected {
 div.calendar td.event {position: relative;}
 
 div.calendar td.event::after {
+    display: block;
+    content: "";
     position: absolute;
     bottom: 1px;
     left: 0;
