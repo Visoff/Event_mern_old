@@ -33,3 +33,15 @@ div.calendar td.selected {
     border-radius: .5rem;
     border: 1px solid var(--white);
 }
+
+div.calendar td.event {position: relative;}
+
+div.calendar td.event::after {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    border-radius: .2rem;
+}
