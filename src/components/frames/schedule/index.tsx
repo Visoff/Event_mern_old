@@ -14,7 +14,7 @@ export default function ScheduleFrame() {
     }, [events])
     return (
         <div className={style.main}>
-            <Calendar date={[selectedDate, setSelectedDate]} />
+            <Calendar events={events} date={[selectedDate, setSelectedDate]} />
             {JSON.stringify(events)}
         </div>
     )

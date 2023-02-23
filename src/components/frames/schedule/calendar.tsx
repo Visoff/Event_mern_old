@@ -2,7 +2,7 @@ import React, { EventHandler, MouseEventHandler, useState } from 'react';
 
 import "./calendar.css"
 
-const Calendar = ({date:[selectedDate, setSelectedDate]}:{date:[Date, Function]}) => {
+const Calendar = ({events, date:[selectedDate, setSelectedDate]}:{events:any, date:[Date, Function]}) => {
   const [date, setDate] = useState(new Date());
 
   const handlePrevMonth = () => {
@@ -49,6 +49,11 @@ const Calendar = ({date:[selectedDate, setSelectedDate]}:{date:[Date, Function]}
             selectedDate &&
             selectedDate.getDate() === currentDay &&
             selectedDate.getMonth() === currentMonth
+              ? "selected"
+              : ""
+          } ${
+            selectedDate &&
+            events.contains({date:selectedDate.toString()})
               ? "selected"
               : ""
           }`}
