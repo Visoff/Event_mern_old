@@ -13,7 +13,7 @@ export default function HomeFrame() {
             window.findEvent = (Query) => {axios.post("https://visoff.ru/api/db/event/find", Query).then(data => {
                 return data.data
             })}
-            setEvents(window.findEvent(Query))
+            setEvents(JSON.parse(window.findEvent(Query)))
         }, 500)
         return () => {clearInterval(inter)}
     }, [events])
