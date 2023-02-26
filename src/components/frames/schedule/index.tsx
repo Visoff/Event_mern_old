@@ -10,6 +10,7 @@ export default function ScheduleFrame() {
     useEffect(() => {
         axios.post("https://visoff.ru/api/db/user/find/schedule", {id:window.user.data._id}).then(data => {
             setSchedule(data.data)
+            window.schedule = data.data
         })
     }, [schedule])
     return (
