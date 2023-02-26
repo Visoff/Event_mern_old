@@ -11,7 +11,8 @@ export default function FrameFather() {
     const [frame, setframe] = useState("Home")
     window.setframe = setframe
     useEffect(() => {
-        window.setframe(location.href.split("#")[1])
+        var page = ""
+        if ((page = location.href.split("#")[1]).length > 0) {window.setframe(page)}
     }, [])
     return (
         <div className="frame-father">
