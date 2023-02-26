@@ -12,7 +12,7 @@ export default function FrameFather() {
     window.setframe = setframe
     useEffect(() => {
         var page = ""
-        if ((page = location.href.split("#")[1]).length > 0) {window.setframe(page)}
+        if ((page = location.href.split("#")[1]) != undefined) {window.setframe(page)}
     }, [])
     return (
         <div className="frame-father">
