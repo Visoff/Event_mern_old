@@ -10,7 +10,7 @@ function update(event:any) {
     })
 }
 
-export default function event({el}:{el:{name:string|null, description:string, date:Date}}) {
+export default function Event({el}:{el:{name:string|null, description:string, date:Date}}) {
     const [active, setActive] = useState(false)
     const [event, setEvent] = useState(el)
     const [schedule, setSchedule] = useState([])
