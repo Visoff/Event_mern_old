@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 import Home from "./home/index"
 import Schedule from "./schedule/index"
@@ -10,6 +10,9 @@ import "./father.css"
 export default function FrameFather() {
     const [frame, setframe] = useState("Home")
     window.setframe = setframe
+    useEffect(() => {
+        window.setframe(location.href.split("#")[1])
+    }, [])
     return (
         <div className="frame-father">
             {frame == "Home" && <Home />}
