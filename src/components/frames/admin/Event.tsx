@@ -5,7 +5,7 @@ import style from "./index.module.css"
 
 function update(event:any) {
     delete event.members
-    axios.post("https://visoff.ru/api/db/event/updateOne", event).then((data) => {
+    axios.post("https://api.visoff.ru/db/event/updateOne", event).then((data) => {
         if (data.data == "ok") {console.log("updated")} else {console.log("moron")}
     })
 }
@@ -18,7 +18,7 @@ export default function Event({el}:{el:{name:string|null, description:string, da
 
     useEffect(() => {
         const inter = setInterval(() => {
-            axios.post("https://visoff.ru/api/db/event/schedule/", {id:(el as any)._id}).then(data => {
+            axios.post("https://api.visoff.ru/db/event/schedule/", {id:(el as any)._id}).then(data => {
                 setSchedule(data.data)
             })
         }, 1000)

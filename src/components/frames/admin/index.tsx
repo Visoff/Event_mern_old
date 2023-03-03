@@ -6,7 +6,7 @@ import Event from "./Event"
 import style from "./index.module.css"
 
 function update(setEvents:Function) {
-    axios.post("https://visoff.ru/api/db/event/getBy/admin", {id:window.user.data._id}).then(data => {
+    axios.post("https://api.visoff.ru/db/event/getBy/admin", {id:window.user.data._id}).then(data => {
         setEvents(data.data)
         console.log(data.data)
     })
@@ -28,7 +28,7 @@ export default function AdminFrame() {
         <div className={style.main}>
             {events.map((el:{_id:string, name:string|null, description:string, date:Date}) => {return (<Event el={el} key={el._id} />)})}
             <button className={style.add} onClick={(e) => {
-                axios.post("https://visoff.ru/api/db/event/create", {admins:[window.user.data._id]})
+                axios.post("https://api.visoff.ru/db/event/create", {admins:[window.user.data._id]})
             }}>Добавить</button>
         </div>
     )
