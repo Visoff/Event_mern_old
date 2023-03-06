@@ -27,7 +27,7 @@ export default function EventInDetails({_id, name, description, color, date, tag
             axios.post("https://api.visoff.ru/db/user/removeFrom/event", {user:window.user.data._id, event:_id})
         } else {
             set_registration_state(true)
-            axios.post("https://aspi.visoff.ru/db/user/addTo/event", {user:window.user.data._id, event:_id})
+            axios.post("https://api.visoff.ru/db/user/addTo/event", {user:window.user.data._id, event:_id})
         }
     }
     return (
