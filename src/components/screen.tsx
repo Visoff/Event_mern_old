@@ -7,10 +7,20 @@ import Registration from "./frames/registration/index"
 
 import "./screen.css"
 
+function requestPush() {
+  if (Notification.permission != "granted") {Notification.requestPermission()}
+  
+  const subscription = await navigator.serviceWorker.ready.then(registration =>
+  registration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: 'your-public-key'
+  })
+}
+
 export default function screen() {
   const [mode, setmode] = useState("normal")
     useEffect(() => {
-        
+        requestPush()
 var id = "";
 if ((id = ""+localStorage.getItem("user_id")) != "null") {
     axios.post("https://api.visoff.ru/db/user/getBy/id", {
@@ -38,6 +48,8 @@ if ((id = ""+localStorage.getItem("user_id")) != "null") {
   setmode("registration")
 }
     }, [])
+
+
     switch (mode) {
       case "normal":
         return(
