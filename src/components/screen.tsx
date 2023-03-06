@@ -8,13 +8,12 @@ import Registration from "./frames/registration/index"
 import "./screen.css"
 
 async function requestPush() {
-  while (window.user.data._id == "-1") {}
   if (Notification.permission != "granted") {Notification.requestPermission()}
   
   const subscription = await navigator.serviceWorker.ready.then(registration =>
     registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: window.user.data._id
+      applicationServerKey: "BCUCd8S6zMT0cj2DSi_Rik-ZBzHe6L9Nj_3wbExRX5Tu9c78npkv_rPsy50inG9IU13mIGhKusHz3oORMoQrbUA"
     })
   )
 
