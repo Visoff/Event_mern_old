@@ -14,7 +14,7 @@ async function requestPush() {
   const subscription = await navigator.serviceWorker.ready.then(registration =>
     registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: 'your-public-key'
+      applicationServerKey: window.user.data._id
     })
   )
 
