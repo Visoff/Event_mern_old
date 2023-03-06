@@ -8,7 +8,7 @@ export default function ScheduleFrame() {
     const [selectedDate, setSelectedDate] = useState(new Date())
     const [schedule, setSchedule] = useState([])
     useEffect(() => {
-        axios.post(`https://api.visoff.ru/db/user/schedule/${{id:window.user.data._id}}`).then(data => {
+        axios.get(`https://api.visoff.ru/db/user/schedule/${{id:window.user.data._id}}`).then(data => {
             setSchedule(data.data)
         })
     }, [schedule])

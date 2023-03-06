@@ -23,7 +23,7 @@ if ((id = ""+localStorage.getItem("user_id")) != "null") {
         window.user.teams = response.data
       }
     )
-    axios.post(`https://api.visoff.ru/db/user/events/${id}`).then(
+    axios.get(`https://api.visoff.ru/db/user/events/${id}`).then(
       response => {
         window.user.events = response.data
       }
