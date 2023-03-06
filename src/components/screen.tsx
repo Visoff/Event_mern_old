@@ -13,23 +13,17 @@ export default function screen() {
         
 var id = "";
 if ((id = ""+localStorage.getItem("user_id")) != "null") {
-    axios.post("https://api.visoff.ru/db/user/getBy/id", {
-      id
-    }).then(
+    axios.get("https://api.visoff.ru/db/user/id/"+id).then(
       response => {
         window.user.data = response.data
       }
     )
-    axios.post("https://api.visoff.ru/db/user/find/teams", {
-      id
-    }).then(
+    axios.get(`https://api.visoff.ru/db/user/teams/${id}`).then(
       response => {
         window.user.teams = response.data
       }
     )
-    axios.post("https://api.visoff.ru/db/user/find/events", {
-      id
-    }).then(
+    axios.post(`https://api.visoff.ru/db/user/events/${id}`).then(
       response => {
         window.user.events = response.data
       }

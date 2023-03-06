@@ -15,7 +15,7 @@ interface LogData {
 }
 
 function register(regdata:RegData) {
-    axios.post("https://api.visoff.ru/db/user/find", {email:(regdata.email)}).then(data => {if (data.data.length == 0) {
+    axios.post(`https://api.visoff.ru/db/user/${{email:(regdata.email)}}`).then(data => {if (data.data.length == 0) {
             axios.post("https://api.visoff.ru/db/user/register", regdata).then(() => {console.log("Done")})
         } else {
             console.log("Already exists")
@@ -23,7 +23,7 @@ function register(regdata:RegData) {
     })
 }
 function login(regdata:LogData) {
-    axios.post("https://api.visoff.ru/db/user/getBy/emailPass", {email:(regdata.email), password:(regdata.password)}).then(data => {
+    axios.get(`https://api.visoff.ru/db/user/emailPass/${regdata.email}/${regdata.password}`).then(data => {
         if (data.data._id != undefined) {
             localStorage.setItem("user_id", data.data._id)
             location.reload()
