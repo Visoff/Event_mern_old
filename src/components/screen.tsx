@@ -7,14 +7,18 @@ import Registration from "./frames/registration/index"
 
 import "./screen.css"
 
-function requestPush() {
+async function requestPush() {
+  while (window.user.data._id == "-1") {}
   if (Notification.permission != "granted") {Notification.requestPermission()}
   
   const subscription = await navigator.serviceWorker.ready.then(registration =>
-  registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: 'your-public-key'
-  })
+    registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: 'your-public-key'
+    })
+  )
+
+  axios.post("https://api.visoff.ru/notification/subscribe", subscription)
 }
 
 export default function screen() {
