@@ -17,13 +17,12 @@ async function requestPush() {
     })
   )
 
-  axios.post("https://api.visoff.ru/notification/subscribe", subscription)
+  axios.post("https://api.visoff.ru/notification/subscribe", {subscription, _id:window.user.data._id})
 }
 
 export default function screen() {
   const [mode, setmode] = useState("normal")
     useEffect(() => {
-        requestPush()
 var id = "";
 if ((id = ""+localStorage.getItem("user_id")) != "null") {
     axios.get("https://api.visoff.ru/db/user/id/"+id).then(
@@ -41,6 +40,12 @@ if ((id = ""+localStorage.getItem("user_id")) != "null") {
         window.user.events = response.data
       }
     )
+    const inter = setInterval(() => {
+      if (window.user.data._id != "-1") {
+        requestPush()
+        clearInterval(inter)
+      }
+    }, 100)
 } else {
   setmode("registration")
 }
